@@ -1,0 +1,30 @@
+:root {
+  --text-color-cv: rgb(148 163 184);
+  --h3-color-cv: rgb(223, 236, 255);
+  --brown-cv: rgba(153, 76, 0, 0.8);
+  --h5-color-cv: rgb(223, 236, 255);
+  --p-color-cv: rgb(148 163 184);
+  --h1-color-cv: rgb(223, 236, 255);
+  --h6-color-cv: rgb(223, 236, 255);
+  --header-text-color-cv: rgb(223, 236, 255);
+  --arrow-color-cv: rgba(45, 212, 191, 0.8);
+  --arrow-color2-cv: rgb(94 234 212);
+  --skill-background-color-cv: rgba(45, 212, 191, 0.1);
+  --skill-background-color-hover-cv: rgba(45, 212, 191, 0.2);
+  --skill-color-cv: rgb(94 234 212);
+  --explore-my-project-color-cv: rgb(94 234 212);
+  --app-background-color-cv: rgb(15 23 42);
+  --header-button-focus-color-cv: rgb(94 234 212);
+}
+
+.pages-container {
+  min-height: 100vh;
+}
+
+.App {
+  background-color: var(--app-background-color-cv);
+}
+
+html {
+  padding: env(safe-area-inset);
+}

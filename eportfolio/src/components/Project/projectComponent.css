@@ -1,0 +1,46 @@
+.project-component-text tr td:nth-child(1) {
+  color: var(--p-color-cv);
+}
+
+.project-component-text tr td:nth-child(2) {
+  color: var(--h1-color-cv);
+  font-weight: 500;
+}
+
+.project-component-text tr td:nth-child(3) {
+  color: var(--h1-color-cv);
+  
+}
+
+.project-component-text tr td:nth-child(4) {
+  color: var(--h1-color-cv);
+}
+.project-component-text tr td:nth-child(5) {
+  color: var(--h1-color-cv);
+}
+
+.project-component-text tr td {
+  padding: 20px 30px 20px 0px;
+  font-size: 15px;
+}
+
+.project-component-text tr{
+    border-bottom: 1px solid rgb(220, 220, 220, 0.1);
+}
+
+.clickable-links, .not-clickable-links{
+    color: var(--h1-color-cv) !important;
+    text-decoration: none !important;
+}
+
+.not-clickable-links{
+    color: var(--p-color-cv) !important;
+}
+
+.link-text {
+  white-space: nowrap;
+}
+
+.arrow {
+  font-size: 20px;
+}

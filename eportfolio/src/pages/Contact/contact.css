@@ -1,0 +1,67 @@
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  color: var(--p-color-cv);
+  padding-bottom: 5px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--app-background-color-cv);
+  color: var(--p-color-cv);
+}
+
+.error {
+  color: red;
+  margin-bottom: 0px !important;
+}
+
+.submit-button {
+  background-color: var(--skill-background-color-cv);
+  color: var(--skill-color-cv);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--skill-background-color-hover-cv);
+  color: var(--skill-color-cv);
+  
+}
+
+.container-success-message {
+  background-color: var(--skill-background-color-cv) !important;
+  border-radius: 23px;
+  margin-top: 10px;
+  padding: 3px;
+}
+
+.success-message {
+  color: var(--skill-color-cv) !important;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}

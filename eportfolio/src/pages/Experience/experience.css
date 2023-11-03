@@ -1,0 +1,55 @@
+.experience-all-project {
+  color: var(--explore-my-project-color-cv);
+}
+
+.container {
+  justify-content: center;
+  margin-top: 50px;
+  max-width: 1400px;
+}
+
+.experience-item {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.experience-item-container h1 {
+  color: var(--h1-color-cv) !important;
+}
+
+.experience-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.experience-table-container table thead tr {
+  border-bottom: 1px solid rgb(220, 220, 220, 0.1);
+  box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+.experience-table-container table thead tr th {
+  padding-bottom: 10px;
+  color: var(--h1-color-cv) !important;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .experience-table-container table th:nth-child(4),
+  .experience-table-container table tr td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 362px) {
+  .experience-table-container table th:nth-child(3),
+  .experience-table-container table tr td:nth-child(3) {
+    display: none;
+  }
+}

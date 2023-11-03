@@ -1,0 +1,112 @@
+.short-introduction,
+.description,
+.hobby,
+.background,
+.mission {
+  color: var(--p-color-cv) !important;
+}
+
+.job-position {
+  color: var(--h5-color-cv) !important;
+}
+
+.who-am-i {
+  color: var(--h1-color-cv) !important;
+  padding-bottom: 5px;
+}
+
+.short-intro-container h6 {
+  color: var(--h6-color-cv) !important;
+  font-weight: bold;
+}
+
+.job-position {
+  max-width: 20rem;
+}
+
+.short-introduction {
+  max-width: 20rem;
+  font-size: 16px;
+}
+
+.skills {
+  padding-top: 30px;
+  color: var(--h1-color-cv) !important;
+  padding-bottom: 5px;
+}
+
+.skills-container {
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+.explore-projects{
+  display: flex;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.explore-experience {
+  display: flex;
+  text-decoration: none;
+}
+
+.explore-projects .explore-my-projects-button, .explore-experience .explore-my-experience-button {
+  text-decoration: none;
+  padding-right: 0px;
+  color: var(--h1-color-cv);
+  border-bottom: 1px solid var(--app-background-color-cv);
+}
+
+.explore-projects .explore-my-projects-button:hover, .explore-experience .explore-my-experience-button:hover {
+  color: var(--explore-my-project-color-cv) !important;
+  border-bottom: 1px solid;
+}
+
+.explore-projects-arrow, .explore-experience-arrow{
+  color: var(--explore-my-project-color-cv)
+}
+
+.explore-experience-container{
+  padding-top: 7px;
+}
+
+.container {
+  display: flex;
+  padding-top: 30px;
+}
+
+.short-intro-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.long-intro-container {
+  flex: 1;
+  padding: 30px 20px 20px 20px;
+}
+
+.name {
+  font-weight: bold;
+  color: var(--h1-color-cv) !important;
+  font-size: 50px;
+  margin-left: -2px !important;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6; /* Adjust line-height as needed */
+}
+
+.hobby,
+.background,
+.mission {
+  font-size: 16px;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    flex-direction: column; /* Reverse the order for mobile screens */
+  }
+}
