@@ -1,0 +1,20 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./eportfolio # Use the Dockerfile in the 'eportfolio' directory for the frontend
+    networks:
+      - portfolionetwork
+
+    ports:
+      - "80:80" # Forward port 443 on the host to port 443 on the container
+  backend:
+    build:
+      context: ./apiPortfolio
+    networks:
+      - portfolionetwork
+
+
+networks:
+  portfolionetwork:
+    driver: bridge

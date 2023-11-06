@@ -15,9 +15,9 @@ import threading
 app = Flask(__name__)
 app.debug = True
 
-load_dotenv('../env.env')
+load_dotenv()
 
-CORS(app, resources={r"/send-email": {"origins": "*"}})
+CORS(app, resources={r"/api/send-email": {"origins": "*"}})
 
 @app.route('/api/send-email', methods=['POST'])
 def receive_data():
