@@ -10,9 +10,7 @@ services:
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - /var/www/certbot-webroot:/var/www/certbot
-    environment:
-      - SSL_CERT_PATH=/etc/letsencrypt/live/dionfrancois.com/fullchain.pem
-      - SSL_KEY_PATH=/etc/letsencrypt/live/dionfrancois.com/privkey.pem
+
 
   backend:
     build:
