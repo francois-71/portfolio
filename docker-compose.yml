@@ -22,13 +22,10 @@ services:
       - portfolionetwork
 
   certbot:
-    image: certbot/certbot
-    networks:
-      - portfolionetwork
+    image: certbot/certbot:latest
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
       - ./certbot/conf/:/etc/letsencrypt/:rw
-    command: certonly --webroot -w /var/www/certbot -d dionfrancois.com
 
 networks:
   portfolionetwork:
