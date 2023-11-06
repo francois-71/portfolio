@@ -6,8 +6,7 @@ services:
     networks:
       - portfolionetwork
     volumes:
-      - /etc/letsencrypt/live/dionfrancois.com/fullchain.pem:/etc/nginx/SSL/fullchain.pem
-      - /etc/letsencrypt/live/dionfrancois.com/privkey.pem:/etc/nginx/SSL/private.pem
+
 
     ports:
       - "443:443" # Forward port 443 on the host to port 443 on the container
