@@ -2,18 +2,31 @@ version: "3"
 services:
   frontend:
     build:
-      context: ./eportfolio # Use the Dockerfile in the 'eportfolio' directory for the frontend
+      context: ./eportfolio
     networks:
       - portfolionetwork
-
     ports:
-      - "443:443" # Forward port 443 on the host to port 443 on the container
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/certbot-webroot:/var/www/certbot
+    environment:
+      - SSL_CERT_PATH=/etc/letsencrypt/live/dionfrancois.com/fullchain.pem
+      - SSL_KEY_PATH=/etc/letsencrypt/live/dionfrancois.com/privkey.pem
+
   backend:
     build:
       context: ./apiPortfolio
     networks:
       - portfolionetwork
 
+  certbot:
+    image: certbot/certbot
+    networks:
+      - portfolionetwork
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/certbot-webroot:/var/www/certbot
 
 networks:
   portfolionetwork:

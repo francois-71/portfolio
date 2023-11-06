@@ -24,10 +24,6 @@ FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-#COPY /etc/letsencrypt/live/dionfrancois.com-0001/fullchain.pem /etc/nginx/SSL/fullchain.pem
-#COPY /etc/letsencrypt/live/dionfrancois.com-0001/privkey.pem /etc/nginx/SSL/privkey.pem
-COPY ./nginx/SSL/private.key /etc/nginx/SSL/private.key
-COPY ./nginx/SSL/certificate.crt /etc/nginx/SSL/certificate.crt
 
 
 # Define the command to run Nginx
