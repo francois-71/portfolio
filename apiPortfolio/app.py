@@ -16,7 +16,6 @@ app = Flask(__name__)
 app.debug = True
 
 load_dotenv()
-
 CORS(app, resources={r"/api/send-email": {"origins": "*"}})
 
 @app.route('/api/send-email', methods=['POST'])
