@@ -19,7 +19,7 @@ load_dotenv()
 
 CORS(app, resources={r"/send-email": {"origins": "*"}})
 
-@app.route('/send-email', methods=['POST'])
+@app.route('/api/send-email', methods=['POST'])
 def receive_data():
     data = request.get_json()
     if not data:

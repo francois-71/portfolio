@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./contact.css";
 import DOMPurify from "dompurify";
 
@@ -25,7 +25,27 @@ function ContactMe() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [serverErrors, setServerErrors] = useState();
   const [sanitizedFormData, setSanitizedFormData] = useState({});
+  const [countdown, setCountdown] = useState(5); // Initial countdown value
 
+  useEffect(() => {
+    let timer;
+
+    if (isSubmitted && countdown > 0) {
+      timer = setInterval(() => {
+        setCountdown((prevCountdown) => prevCountdown - 1);
+      }, 1000); // Decrease the countdown every second
+    }
+
+    if (countdown === 0) {
+      window.location.href = "/About"; // Redirect to "About" page after 5 seconds
+    }
+
+    return () => {
+      clearInterval(timer); // Clear the timer when the component unmounts
+    };
+  }, [isSubmitted, countdown]);
+ 
+      
   const validateForm = () => {
     const newErrors = {};
 
@@ -77,7 +97,7 @@ function ContactMe() {
 
     if (validateForm()) {
       try {
-        fetch("https://127.0.0.1/send-email", {
+        fetch("api/send-email", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -97,9 +117,7 @@ function ContactMe() {
             } else {
               setIsSubmitted(true);
               // wait 5 seconds and redirect to home
-              setTimeout(() => {
-                window.location.href = "/About";
-              }, 3000);
+              window.scrollTo(0, 0);
             }
           })
           .catch((error) => {
@@ -120,7 +138,7 @@ function ContactMe() {
           <p className="success-message">
             &#x1F4E7; Form submitted successfully! &#x1F4E7;
           </p>
-          <p className="success-message">Redirecting in 3 seconds...</p>
+          <p className="success-message ">Redirecting in {countdown}... </p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="form">

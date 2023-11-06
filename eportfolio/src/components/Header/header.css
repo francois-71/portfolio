@@ -9,6 +9,11 @@
   background-color: var(--app-background-color-cv);
 }
 
+.a-resume {
+  color: inherit !important;
+  text-decoration: none;
+}
+
 .form-title {
   color: var(--h1-color-cv) !important;
   text-align: center;

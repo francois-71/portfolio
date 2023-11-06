@@ -10,6 +10,9 @@ RUN pip install --upgrade Flask
 
 RUN pip install -r requirements.txt
 
-EXPOSE 80
+COPY . .
 
-CMD ["python", "app.py"]
+EXPOSE 5000
+
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000"]
+

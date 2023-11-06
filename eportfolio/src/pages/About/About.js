@@ -23,8 +23,8 @@ const About = () => {
           <Skill name="Python" />
           <Skill name="Java" />
           <Skill name="JavaScript" />
-          <Skill name="Notions of Go" />
-          <Skill name="Notions of C++" />
+          <Skill name="C++" />
+          <Skill name="Go notions" />
         </div>
         <h6 className="web-frameworks"> Web frameworks / Web development </h6>
         <div className="skills-container">

@@ -41,8 +41,8 @@
 }
 
 @media (max-width: 768px) {
-  .experience-table-container table th:nth-child(4),
-  .experience-table-container table tr td:nth-child(4) {
+  .experience-table-container table th:nth-child(2),
+  .experience-table-container table tr td:nth-child(2) {
     display: none;
   }
 }

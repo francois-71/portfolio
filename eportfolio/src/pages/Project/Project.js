@@ -50,6 +50,7 @@ const Project = () => {
                   <Skill key="6" name="Docker" />,
                   <Skill key="7" name="GitLab CI/CD" />,
                   <Skill key="8" name="Linux" />,
+                  <Skill key="9" name="NGINX" />,
                 ]}
                 link=""
                 show_link="Internal project"

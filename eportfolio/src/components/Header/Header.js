@@ -37,9 +37,7 @@ const Header = () => {
       }`}
     >
       <Link to="/about">
-        <Logo
-          logo="/assets/images/francois-dion-logo.png"
-        />
+        <Logo logo="/assets/media/images/francois-dion-logo.png" />
       </Link>
 
       <button
@@ -75,7 +73,6 @@ const Header = () => {
               className="header-element nav-item nav-link mx-5 text-white"
               to="/experience"
               onClick={closeNav}
-
             >
               02. Experience
             </Link>
@@ -100,13 +97,14 @@ const Header = () => {
           </li>
         </ul>
         <div className="navbar-nav ml-auto">
-        <Link
-          className="header-element nav-item nav-link text-white"
-          to="/resume" // Link to the route for the PDF viewer
-        >
-          Resume
-        </Link>
-      </div>
+          <Link
+              className="header-element nav-item nav-link  text-white"
+              to="/resume"
+              onClick={closeNav}
+            >
+              Resume
+            </Link>
+        </div>
       </div>
     </nav>
   );

@@ -35,12 +35,12 @@ const ProjectComponent = ({
         {[year, project, made_at, built_with, link].map((item, index) => (
           <td key={index}>
             {isScreenBelow986px && index === 1 && isLinkNotEmpty ? (
-              <a className="clickable-links" href={link}>
+              <a className="clickable-links" href={link} target="_blank" rel="noreferrer">
                 <span className="arrow">&#8594;&nbsp;</span>
                 <span className="link-text">{item}</span>
               </a>
             ) : isLinkNotEmpty && index === 4 ? (
-              <a className="clickable-links" href={link}>
+              <a className="clickable-links" href={link} target="_blank" rel="noreferrer">
                 <span className="arrow">&#8594;&nbsp;</span>
                 <span className="link-text">{show_link}</span>
               </a>

@@ -17,7 +17,7 @@ const ExperienceComponent = ({
         </td>
 
         <td>
-          <a className="company-name" href={company_url}>
+          <a className="company-name" href={company_url} target="_blank" rel="noreferrer">
             {company}
           </a>
         </td>
