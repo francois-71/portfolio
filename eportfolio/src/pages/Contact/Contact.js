@@ -97,7 +97,7 @@ function ContactMe() {
 
     if (validateForm()) {
       try {
-        fetch("http://localhost:5000/api/send-email", {
+        fetch("/api/send-email", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
