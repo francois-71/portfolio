@@ -24,6 +24,7 @@ FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/SSL/ /etc/nginx/SSL/
 
 
 # Define the command to run Nginx
