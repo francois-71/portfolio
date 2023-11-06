@@ -5,6 +5,8 @@ services:
       context: ./eportfolio # Use the Dockerfile in the 'eportfolio' directory for the frontend
     networks:
       - portfolionetwork
+    volumes:
+      - /etc/letsencrypt/live/dionfrancois.com-0001/
 
 
     ports:
