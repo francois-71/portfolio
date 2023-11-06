@@ -23,9 +23,6 @@ RUN npm run build
 FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx/SSL/certificate.crt /etc/nginx/SSL/certificate.crt
-COPY ./nginx/SSL/private.key /etc/nginx/SSL/private.key
 
 
 # Define the command to run Nginx
