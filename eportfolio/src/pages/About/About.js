@@ -60,6 +60,10 @@ const About = () => {
           <Skill name="Office" />
           <Skill name="Google" />
         </div>
+        <h6 className="cloud">Cloud</h6>
+        <div className="skills-container">
+          <Skill name="AWS" />
+        </div>
       </div>
       <div className="long-intro-container">
         <h3 className="who-am-i">Who am I</h3>
