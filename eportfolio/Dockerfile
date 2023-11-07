@@ -20,10 +20,11 @@ COPY . ./
 RUN npm run build
 
 # Use a lightweight Nginx image to serve the built frontend
-FROM nginx:alpine
+FROM nginx:alpine 
 
-#COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/build /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+
 
 
 # Define the command to run Nginx
