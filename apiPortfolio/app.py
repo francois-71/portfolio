@@ -2,15 +2,18 @@ from flask import Flask, request, jsonify
 from wtforms import StringField, TextAreaField, validators
 from wtforms import Form
 from flask_cors import CORS
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from dotenv import load_dotenv
+from datetime import date
+import os
+import bleach
+import threading
+import datetime
 import secrets
 import re
 import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import os
-from dotenv import load_dotenv
-import bleach
-import threading
+
 
 app = Flask(__name__)
 app.debug = True
@@ -46,11 +49,11 @@ def send_email(name, email, message, title):
     smtp_password = os.getenv('SMTP_PASSWORD')
     
     # Load HTML content from file
-    with open('email_templates/email_template.html', 'r') as html_file:
+    with open('email_templates/email_template_pro/email_template.html', 'r') as html_file:
         html_content = html_file.read()
 
     # Load CSS content from file
-    with open('email_templates/email_style.css', 'r') as css_file:
+    with open('email_templates/email_template_pro/email_style.css', 'r') as css_file:
         css_content = css_file.read()
     
     # Create a connection to the SMTP server
@@ -94,11 +97,81 @@ def send_email(name, email, message, title):
     # Send the email
     server.sendmail(to_email, to_email, msg.as_string())
     
+    send_email_to_sender(name, email, message, title)
+    
     # Quit the server
     server.quit()
     
     print("email sent")
     return True
+
+def send_email_to_sender(name, email, message, title):
+    
+        date_today = str(date.today().strftime('%Y-%m-%d'))
+    
+        
+        print("sending email to sender")
+        
+        smtp_server = 'smtp.gmail.com'
+        smtp_port = 587
+        smtp_username = os.getenv('SMTP_USERNAME')
+        smtp_password = os.getenv('SMTP_PASSWORD')
+        
+        # Load HTML content from file
+        with open('email_templates/email_template_to_sender/email_template_to_sender.html', 'r') as html_file:
+            html_content = html_file.read()
+    
+        # Load CSS content from file
+        with open('email_templates/email_template_to_sender/style_template_to_sender.css', 'r') as css_file:
+            css_content = css_file.read()
+        
+        # Create a connection to the SMTP server
+        server = smtplib.SMTP(smtp_server, smtp_port)
+        
+        # Start the TLS encryption
+        server.starttls()
+        
+        # Log in to your email account
+        server.login(smtp_username, smtp_password)
+        
+        # Create an email message
+        subject = "Francois Dion - Thank you for your message"
+        to_email = email
+        from_email = smtp_username
+        msg = MIMEMultipart('alternative')
+        msg['From'] = from_email
+        msg['To'] = to_email
+        msg['Subject'] = subject
+        
+        
+    
+        # Replace placeholders in HTML content with actual data
+        html_content = html_content.format(name=name, message=message, email=email, date=date_today)
+    
+        # Construct the HTML email message
+        html_message = f"""
+            <html>
+                <head>
+                    <style>
+                        {css_content}
+                    </style>
+                </head>
+                <body>
+                    {html_content}
+                </body>
+            </html>
+        """
+        
+        msg.attach(MIMEText(html_message, 'html'))
+
+        # Send the email
+        server.sendmail(to_email, to_email, msg.as_string())
+        
+        # Quit the server
+        server.quit()
+        
+        print("email sent")
+        return True
 
 def check_input(name, email, message, title):
     print("checking the input")
