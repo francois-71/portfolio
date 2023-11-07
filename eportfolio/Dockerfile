@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install --silent
 
 # Copy the rest of your frontend application code to the container
-COPY . ./
+COPY . .
 
 # Copy the Nginx configuration file and SSL certificates
 
