@@ -80,6 +80,16 @@ const Project = () => {
                 show_link="stations-e.shop"
               />
               <ProjectComponent
+                year="2022"
+                project="GIMP-like image editor"
+                made_at="ISEP (Paris, France)"
+                built_with={[
+                  <Skill key="1" name="C++" />,
+                ]}
+                link="https://github.com/francois-71/gimpsep-opencv_caf/"
+                show_link="github.com/francois-71/gimpsep-opencv_caf/"
+              />
+              <ProjectComponent
                 year="2021"
                 project="Tinder Autoclicker with Facial, Eye Recognition and pixel analysis"
                 made_at=""
@@ -95,9 +105,11 @@ const Project = () => {
                 project="Mr Jack Pocket Game Development"
                 made_at="ISEP (Paris, France)"
                 built_with={[<Skill key="1" name="Java" />]}
-                link=""
-                show_link=""
+                link="https://github.com/francois-71/MrJackPocketFPW"
+                show_link="github.com/francois-71/MrJackPocketFPW"
               />
+              
+                
             </table>
           </div>
         </div>

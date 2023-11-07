@@ -64,7 +64,7 @@ const About = () => {
       <div className="long-intro-container">
         <h3 className="who-am-i">Who am I</h3>
         <p className="description">
-          I am a dynamic young professional with a passion for technology and
+          I am a dynamic young professional from France with a passion for technology and
           innovation. My journey into the world of IT and software development
           began during my academic pursuits, where I honed my skills in web and
           software development. While I've recently graduated, I've already had
@@ -80,7 +80,7 @@ const About = () => {
           technology.
         </p>
         <p className="background">
-          Raised in The Hague, Netherlands, and born in Paris, my multicultural
+          Grown up in The Hague, Netherlands, and born in Paris, my multicultural
           background has instilled in me a global perspective. My experiences
           have taken me to various countries, including South Korea, Australia,
           and the Netherlands, further enriching my understanding of diverse
