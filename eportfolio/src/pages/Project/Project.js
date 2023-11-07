@@ -33,6 +33,7 @@ const Project = () => {
                   <Skill key="5" name="JavaScript" />,
                   <Skill key="6" name="BrowserStack" />,
                   <Skill key="7" name="Flask" />,
+                  <Skill key="8" name="AWS" />,
                 ]}
                 link="https://github.com/francois-71/portfolio"
                 show_link="github.com/francois-71/portfolio"
