@@ -8,7 +8,6 @@ services:
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
-    restart: unless-stopped
     ports:
       - "80:80" # Forward port 80 on the host to port 80 on the container
       - "443:443" # Forward port 443 on the host to port 443 on the container
@@ -22,7 +21,6 @@ services:
 
   certbot:
     image: certbot/certbot
-    restart: unless-stopped
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
