@@ -34,8 +34,8 @@ const Project = () => {
                   <Skill key="6" name="BrowserStack" />,
                   <Skill key="7" name="Flask" />,
                 ]}
-                link=""
-                show_link=""
+                link="https://github.com/francois-71/portfolio"
+                show_link="github.com/francois-71/portfolio"
               />
               <ProjectComponent
                 year="2023"
@@ -64,7 +64,7 @@ const Project = () => {
                   <Skill key="2" name="p5.js" />,
                 ]}
                 link=""
-                show_link="Have to take a look"
+                show_link=""
               />
               <ProjectComponent
                 year="2022"
@@ -87,7 +87,7 @@ const Project = () => {
                   <Skill key="2" name="OpenCV" />,
                 ]}
                 link=""
-                show_link="Have to check my other PC"
+                show_link=""
               />
               <ProjectComponent
                 year="2021"
@@ -95,7 +95,7 @@ const Project = () => {
                 made_at="ISEP (Paris, France)"
                 built_with={[<Skill key="1" name="Java" />]}
                 link=""
-                show_link="Have to check the github repo"
+                show_link=""
               />
             </table>
           </div>
