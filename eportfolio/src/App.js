@@ -9,8 +9,10 @@ import NotFound from "./pages/NotFound/NotFound";
 import { Route, Routes } from "react-router-dom";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();

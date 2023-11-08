@@ -37,7 +37,8 @@ const Header = () => {
       }`}
     >
       <Link to="/about">
-        <Logo logo="/assets/media/images/francois-dion-logo.png" />
+        <Logo logo="/assets/media/images/francois-dion-logo.png"
+         />
       </Link>
 
       <button
