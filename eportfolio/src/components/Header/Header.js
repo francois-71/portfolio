@@ -66,7 +66,7 @@ const Header = () => {
               to="/about"
               onClick={closeNav}
             >
-              01. About
+              &#x1F9B4; About
             </Link>
           </li>
           <li>
@@ -75,7 +75,7 @@ const Header = () => {
               to="/experience"
               onClick={closeNav}
             >
-              02. Experience
+              &#x1F30D; Experience
             </Link>
           </li>
           <li>
@@ -84,7 +84,7 @@ const Header = () => {
               to="/projects"
               onClick={closeNav}
             >
-              03. Projects
+              &#x1F6A7; Projects
             </Link>
           </li>
           <li>
@@ -93,7 +93,7 @@ const Header = () => {
               to="/contact"
               onClick={closeNav}
             >
-              04. Contact
+              &#x1F4E7; Contact
             </Link>
           </li>
         </ul>

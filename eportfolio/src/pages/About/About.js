@@ -100,14 +100,14 @@ const About = () => {
         <div className="explore-projects-container">
           <Link className="explore-projects" to="/projects">
             <div className="explore-my-projects-button">
-              <span className="explore-projects-arrow">&#8594;&nbsp;</span>Explore my projects
+              <span className="explore-projects-arrow">&#8594;&nbsp;</span>Explore my projects &nbsp;&#x1F6A7;
             </div>
           </Link>
         </div>
         <div className="explore-experience-container">
           <Link className="explore-experience" to="/experience">
             <div className="explore-my-experience-button">
-              <span className="explore-experience-arrow">&#8594;&nbsp;</span>View my experience
+              <span className="explore-experience-arrow">&#8594;&nbsp;</span>View my experience &nbsp;&#x1F30D;
             </div>
           </Link>
         </div>

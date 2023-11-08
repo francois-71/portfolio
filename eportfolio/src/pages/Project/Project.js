@@ -24,7 +24,7 @@ const Project = () => {
               <ProjectComponent
                 year="2023"
                 project="Portfolio"
-                made_at=""
+                made_at="&#x1F3E0;"
                 built_with={[
                   <Skill key="1" name="React" />,
                   <Skill key="2" name="Bootstrap" />,
@@ -54,7 +54,7 @@ const Project = () => {
                   <Skill key="9" name="NGINX" />,
                 ]}
                 link=""
-                show_link="Internal project"
+                show_link="&#x1F510;"
               />
               <ProjectComponent
                 year="2023"
@@ -65,7 +65,8 @@ const Project = () => {
                   <Skill key="2" name="p5.js" />,
                 ]}
                 link=""
-                show_link=""
+                show_link="&#x1F510;"
+                
               />
               <ProjectComponent
                 year="2022"
@@ -92,13 +93,13 @@ const Project = () => {
               <ProjectComponent
                 year="2021"
                 project="Tinder Autoclicker with Facial, Eye Recognition and pixel analysis"
-                made_at=""
+                made_at="&#x1F3E0;"
                 built_with={[
                   <Skill key="1" name="Java" />,
                   <Skill key="2" name="OpenCV" />,
                 ]}
                 link=""
-                show_link=""
+                show_link="&#x1F510;"
               />
               <ProjectComponent
                 year="2021"

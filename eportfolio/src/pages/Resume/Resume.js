@@ -8,7 +8,7 @@ const Resume = () => {
   return (
     <div className="resume-container">
       <a href={pdfPath} download="François_Dion_Resume.pdf">
-        <p>Download my resume</p>
+        <p>&#x1F4E5; Download my resume</p>
       </a>
       <div className="resume-image">
         <img src={imageSrc} alt="François Dion's Resume" className="resume-image" />
