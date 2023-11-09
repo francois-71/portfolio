@@ -30,8 +30,6 @@ const About = () => {
           <Skill name="React" />
           <Skill name="HTML" />
           <Skill name="CSS" />
-          <Skill name="JavaScript" />
-          <Skill name="Docker" />
         </div>
         <h6 className="tools">Version control</h6>
         <div className="skills-container">
