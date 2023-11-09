@@ -75,7 +75,7 @@ const About = () => {
         <p className="hobby">
           Beyond my professional life, I have been a glider pilot for 7 years
           now and have held my glider pilot licence (SPL) since 2018. Aviation
-          is another area I'm passionate about and is a hobby that provides me
+          is another area I am passionate about and is a hobby that provides me
           with a sense of freedom and adventure that complements my dedication
           to innovation and technology.
         </p>

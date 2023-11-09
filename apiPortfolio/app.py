@@ -62,7 +62,6 @@ def send_email(name, email, message, title):
     # Start the TLS encryption
     server.starttls()
     
-    # Log in to your email account
     server.login(smtp_username, smtp_password)
     
     # Create an email message
@@ -77,8 +76,6 @@ def send_email(name, email, message, title):
 
     # Replace placeholders in HTML content with actual data
     html_content = html_content.format(name=name, message=message, email=email)
-
-    # Construct the HTML email message
     html_message = f"""
         <html>
             <head>
@@ -99,7 +96,6 @@ def send_email(name, email, message, title):
     
     send_email_to_sender(name, email, message, title)
     
-    # Quit the server
     server.quit()
     
     print("email sent")
@@ -117,24 +113,18 @@ def send_email_to_sender(name, email, message, title):
         smtp_username = os.getenv('SMTP_USERNAME')
         smtp_password = os.getenv('SMTP_PASSWORD')
         
-        # Load HTML content from file
         with open('email_templates/email_template_to_sender/email_template_to_sender.html', 'r') as html_file:
             html_content = html_file.read()
     
-        # Load CSS content from file
         with open('email_templates/email_template_to_sender/style_template_to_sender.css', 'r') as css_file:
             css_content = css_file.read()
         
-        # Create a connection to the SMTP server
         server = smtplib.SMTP(smtp_server, smtp_port)
         
-        # Start the TLS encryption
         server.starttls()
-        
-        # Log in to your email account
+
         server.login(smtp_username, smtp_password)
         
-        # Create an email message
         subject = "Francois Dion - Thank you for your message"
         to_email = email
         from_email = smtp_username
@@ -143,9 +133,6 @@ def send_email_to_sender(name, email, message, title):
         msg['To'] = to_email
         msg['Subject'] = subject
         
-        
-    
-        # Replace placeholders in HTML content with actual data
         html_content = html_content.format(name=name, message=message, email=email, date=date_today)
     
         # Construct the HTML email message

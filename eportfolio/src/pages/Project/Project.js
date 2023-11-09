@@ -34,6 +34,8 @@ const Project = () => {
                   <Skill key="6" name="BrowserStack" />,
                   <Skill key="7" name="Flask" />,
                   <Skill key="8" name="AWS" />,
+                  <Skill key="9" name="Docker" />,
+                  <Skill key="10" name="NGINX" />,
                 ]}
                 link="https://github.com/francois-71/portfolio"
                 show_link="github.com/francois-71/portfolio"
