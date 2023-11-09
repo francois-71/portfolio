@@ -103,7 +103,7 @@ const Header = () => {
               to="/resume"
               onClick={closeNav}
             >
-              Resume
+              &#127919; Resume
             </Link>
         </div>
       </div>

@@ -8,7 +8,6 @@
 
 .experience-component-text tr td:nth-child(4) {
   color: var(--h1-color-cv);
-  font-weight: 500;
 }
 
 .experience-component-text tr td {

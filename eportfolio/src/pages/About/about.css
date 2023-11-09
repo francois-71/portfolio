@@ -1,13 +1,12 @@
 .short-introduction,
 .description,
 .hobby,
-.background,
-.mission {
+.background {
   color: var(--p-color-cv) !important;
 }
 
 .job-position {
-  color: var(--h5-color-cv) !important;
+  color: var(--explore-my-project-color-cv) !important;
 }
 
 .who-am-i {
@@ -40,37 +39,70 @@
   padding-bottom: 20px;
 }
 
-.explore-projects{
+.explore-projects {
   display: flex;
-  margin-top: 30px;
   text-decoration: none;
 }
 
 .explore-experience {
   display: flex;
+  padding-top: 30px;
   text-decoration: none;
 }
 
-.explore-projects .explore-my-projects-button, .explore-experience .explore-my-experience-button {
+.explore-resume {
+  display: flex;
   text-decoration: none;
+}
+
+.explore-projects .explore-my-projects-button,
+.explore-experience .explore-my-experience-button,
+.explore-resume .explore-my-resume-button {
+  text-decoration: none;
+  font-weight: 500;
   padding-right: 0px;
   color: var(--h1-color-cv);
   border-bottom: 1px solid var(--app-background-color-cv);
 }
 
-.explore-projects .explore-my-projects-button:hover, .explore-experience .explore-my-experience-button:hover {
+.explore-projects .explore-my-projects-button:hover,
+.explore-experience .explore-my-experience-button:hover,
+.explore-resume .explore-my-resume-button:hover {
   color: var(--explore-my-project-color-cv) !important;
   border-bottom: 1px solid;
 }
 
-.explore-projects-arrow, .explore-experience-arrow{
-  color: var(--explore-my-project-color-cv)
+.explore-projects-arrow,
+.explore-experience-arrow,
+.explore-resume-arrow {
+  color: var(--explore-my-project-color-cv);
 }
 
-.explore-experience-container{
+.explore-projects-container, .explore-resume-container {
   padding-top: 7px;
 }
 
+.education-container {
+  padding-top: 50px;
+}
+.education {
+  color: var(--h1-color-cv) !important;
+  padding-bottom: 5px;
+}
+
+.education-text {
+  color: var(--p-color-cv) !important;
+  font-size: 16px !important;
+}
+
+.education-time-place {
+  font-size: 12px;
+}
+
+.education-school {
+  font-weight: 500;
+  color: var(--h5-color-cv) !important;
+}
 .container {
   display: flex;
   padding-top: 30px;
@@ -96,13 +128,14 @@
 .description {
   font-size: 16px;
   line-height: 1.6; /* Adjust line-height as needed */
+  text-align: justify;
 }
 
 .hobby,
-.background,
-.mission {
+.background {
   font-size: 16px;
   margin-top: 20px; /* Adjust margin as needed */
+  text-align: justify;
 }
 
 @media screen and (max-width: 991.98px) {

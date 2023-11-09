@@ -21,3 +21,8 @@
 .linkedin-logo:hover {
     color: #0077B5 !important;
 }
+
+.footer-text{
+   padding-bottom: 15px;
+    color: rgba(148,163, 184, 0.2) !important;
+}

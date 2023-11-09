@@ -143,7 +143,7 @@ function ContactMe() {
       ) : (
         <form onSubmit={handleSubmit} className="form">
           <h5 className="form-title">
-            Send me an email and I will get back to you as soon as possible.
+            Let's get in touch! Fill out the form below and I'll get back to you as soon as possible :)
           </h5>
 
           <div className="form-group">
