@@ -16,7 +16,6 @@ import smtplib
 
 
 app = Flask(__name__)
-app.debug = True
 
 load_dotenv()
 CORS(app, resources={r"/api/send-email": {"origins": "https://www.dionfrancois.com"}})
@@ -163,6 +162,11 @@ def send_email_to_sender(name, email, message, title):
 def check_input(name, email, message, title):
     print("checking the input")
     errors = {}
+    
+    name = bleach.clean(name)
+    email = bleach.clean(email)
+    message = bleach.clean(message)
+    title = bleach.clean(title)
 
     if not title:
         errors['title'] = 'Title is required'
@@ -174,10 +178,6 @@ def check_input(name, email, message, title):
         errors['message'] = 'Message is required'
 
     # Perform HTML sanitization
-    name = bleach.clean(name)
-    email = bleach.clean(email)
-    message = bleach.clean(message)
-    title = bleach.clean(title)
 
     if len(name) > 200:
         errors['name'] = 'Name is too long'
