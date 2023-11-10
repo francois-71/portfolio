@@ -163,6 +163,8 @@ def check_input(name, email, message, title):
     print("checking the input")
     errors = {}
     
+    print('message', message)
+    
     name = bleach.clean(name)
     email = bleach.clean(email)
     message = bleach.clean(message)
@@ -177,8 +179,7 @@ def check_input(name, email, message, title):
     if not message:
         errors['message'] = 'Message is required'
 
-    # Perform HTML sanitization
-
+    
     if len(name) > 200:
         errors['name'] = 'Name is too long'
     if len(email) > 250:
@@ -187,7 +188,16 @@ def check_input(name, email, message, title):
         errors['message'] = 'Message is too long'
     if len(title) > 200:
         errors['title'] = 'Title is too long'
+        
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+        errors['email'] = 'Email is not valid'
     
+    if not re.match(r"^[a-zA-Z]+(?:-[a-zA-Z]+)*$", name):
+        errors['name'] = 'Name only accepts letters and hyphens'
+        
+    if not re.match(r"^[a-zA-Z]+(?:-[a-zA-Z]+)*$", title):
+        errors['title'] = 'Title only accepts letters, hyphens and spaces'
+        
     if errors:
         return False, errors
 
