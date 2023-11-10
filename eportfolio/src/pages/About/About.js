@@ -10,9 +10,17 @@ const About = () => {
         <h1 className="name">François Dion</h1>
         <h5 className="job-position"> Software Engineer </h5>
         <p className="short-introduction">
-          I design and build software solutions for the web. I am passionate
-          about exploring new technologies to stay at the forefront of
-          innovation.
+          Graduated from ISEP in 2023 with a Master's degree in Software
+          Engineering, my areas of expertise are web and software development. I
+          am always looking for new challenges and opportunities.
+          <div className="explore-contact-container">
+            <Link className="explore-contact" to="/contact">
+              <div className="explore-contact-button">
+                <span className="explore-contact-arrow">&#8594;&nbsp;</span>
+                Let's talk ! &#x1F4E7;
+              </div>
+            </Link>
+          </div>
         </p>
         <h3 className="skills">Skills</h3>
         <h6 className="programming-languages">Programming languages</h6>
@@ -63,27 +71,28 @@ const About = () => {
       <div className="long-intro-container">
         <h3 className="who-am-i">Who am I</h3>
         <p className="description">
-          I am a software engineer/developer from France with a passion for
-          technology and innovation. My journey into the world of IT and
-          software development began during my academic pursuits, where I honed
-          my skills in web and software development. While I've recently
-          graduated, I've already had the opportunity to contribute to
-          significant projects in software and web development.
+          I am a{" "}
+          <span className="description-strong">
+            Software Engineer/Developer from France
+          </span>{" "}
+          with a strong interest in web and software. My journey into the world
+          of IT began during my academic pursuits, where I honed my skills in
+          web and software development. While I've recently graduated, I've
+          already had the opportunity to contribute to significant projects in
+          that area.
         </p>
         <p className="hobby">
-          Beyond my professional life, I have been a glider pilot for 7 years
+          Beyond my professional life, I have been a{" "}
+          <span className="description-strong">glider pilot for 7 years</span>{" "}
           now and have held my glider pilot licence (SPL) since 2018. Aviation
           is another area I am passionate about and is a hobby that provides me
-          with a sense of freedom and adventure that complements my dedication
-          to innovation and technology.
+          with a sense of freedom and adventure.
         </p>
         <p className="background">
           I was born in Paris in France and grew up in The Hague in the
           Netherlands. My multicultural background has instilled in me a global
           perspective and my experiences have taken me to various countries,
-          including South Korea, Australia, and the Netherlands, further
-          enriching my understanding of diverse cultures and international work
-          environments.
+          including South Korea, Australia, and The Netherlands.
         </p>
         <div className="explore-experience-container">
           <Link className="explore-experience" to="/experience">
@@ -115,7 +124,8 @@ const About = () => {
             <p className="education-text-1">
               <span className="education-text-bold">
                 <span className="education-school">
-                  Institut Supérieur d’Électronique de Paris (ISEP) &#x1F1EB;&#x1F1F7;
+                  Institut Supérieur d’Électronique de Paris (ISEP)
+                  &#x1F1EB;&#x1F1F7;
                 </span>
               </span>
               <br /> <i>Master in Software Engineering</i>

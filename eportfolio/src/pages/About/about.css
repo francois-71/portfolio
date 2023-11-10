@@ -5,6 +5,10 @@
   color: var(--p-color-cv) !important;
 }
 
+.description-strong{
+  color: var(--h5-color-cv) !important;
+  font-weight: 500;
+}
 .job-position {
   color: var(--explore-my-project-color-cv) !important;
 }
@@ -55,9 +59,16 @@
   text-decoration: none;
 }
 
+.explore-contact { 
+  display: flex;
+  padding-top: 30px;
+  text-decoration: none;
+}
+
 .explore-projects .explore-my-projects-button,
 .explore-experience .explore-my-experience-button,
-.explore-resume .explore-my-resume-button {
+.explore-resume .explore-my-resume-button,
+.explore-contact .explore-contact-button {
   text-decoration: none;
   font-weight: 500;
   padding-right: 0px;
@@ -67,14 +78,16 @@
 
 .explore-projects .explore-my-projects-button:hover,
 .explore-experience .explore-my-experience-button:hover,
-.explore-resume .explore-my-resume-button:hover {
+.explore-resume .explore-my-resume-button:hover,
+.explore-contact .explore-contact-button:hover {
   color: var(--explore-my-project-color-cv) !important;
   border-bottom: 1px solid;
 }
 
 .explore-projects-arrow,
 .explore-experience-arrow,
-.explore-resume-arrow {
+.explore-resume-arrow,
+.explore-contact-arrow {
   color: var(--explore-my-project-color-cv);
 }
 
