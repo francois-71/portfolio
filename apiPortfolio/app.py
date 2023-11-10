@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 load_dotenv()
 CORS(app, resources={r"/api/send-email": {"origins": "https://www.dionfrancois.com"}})
-
+app.debug = False
 @app.route('/api/send-email', methods=['POST'])
 def receive_data():
     data = request.get_json()
@@ -179,7 +179,6 @@ def check_input(name, email, message, title):
     if not message:
         errors['message'] = 'Message is required'
 
-    
     if len(name) > 200:
         errors['name'] = 'Name is too long'
     if len(email) > 250:
