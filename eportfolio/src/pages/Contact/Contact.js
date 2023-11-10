@@ -44,8 +44,7 @@ function ContactMe() {
       clearInterval(timer); // Clear the timer when the component unmounts
     };
   }, [isSubmitted, countdown]);
- 
-      
+
   const validateForm = () => {
     const newErrors = {};
 
@@ -143,12 +142,13 @@ function ContactMe() {
       ) : (
         <form onSubmit={handleSubmit} className="form">
           <h5 className="form-title">
-            Let's get in touch! Fill out the form below and I'll get back to you as soon as possible :)
+            Let's get in touch! <br></br> Fill out the form below and I will get back to you
+            as soon as possible :)
           </h5>
 
           <div className="form-group">
             <label htmlFor="title" className="label">
-              Title:
+              Title: *
             </label>
             <input
               placeholder="Title of your message"
@@ -164,7 +164,7 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="name" className="label">
-              Full Name:
+              Full Name: *
             </label>
             <input
               placeholder="Your full name"
@@ -180,7 +180,7 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="email" className="label">
-              Email:
+              Email: *
             </label>
             <input
               placeholder="contactme@example.com"
@@ -196,7 +196,7 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="message" className="label">
-              Message:
+              Message: *
             </label>
             <textarea
               placeholder="limit: 1500 characters"
@@ -214,6 +214,9 @@ function ContactMe() {
           </button>
         </form>
       )}
+      <span className="contact-note">
+        Note: No information is stored on the server.
+      </span>
     </div>
   );
 }
