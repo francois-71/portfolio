@@ -3,7 +3,7 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
-const Header = () => {
+const Header = (props) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -36,7 +36,7 @@ const Header = () => {
         isNavOpen ? "navbar-expanded" : ""
       }`}
     >
-      <Link to="/about">
+      <Link to="/about" onClick={props.handleScrollTop}>
         <Logo logo="/assets/media/images/francois-dion-logo.png"
          />
       </Link>

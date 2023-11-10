@@ -10,9 +10,8 @@ import { Route, Routes } from "react-router-dom";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,11 +25,13 @@ function ScrollToTop() {
 
 //check that the path has no more than 2 segments, otherwise redirect to NotFound page
 
-
 function App() {
+  const handleScrollTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="App">
-      <Header />
+      <Header handleScrollTop={handleScrollTop}></Header>
       <div className="pages-container">
         <Routes>
           <Route path="/" element={<About />} />
