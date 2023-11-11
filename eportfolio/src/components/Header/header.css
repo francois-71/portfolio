@@ -3,15 +3,16 @@
   border-bottom: 2px solid transparent;
   font-weight: 600;
   color: var(--header-text-color-cv) !important;
+  text-align: center;
+  width: 125px;
 }
 
 .navbar {
   background-color: var(--app-background-color-cv);
 }
 
-.a-resume {
-  color: inherit !important;
-  text-decoration: none;
+.navbar-nav a.resume{
+  width: 100px;
 }
 
 .form-title {
@@ -24,6 +25,10 @@
   border-radius: 32%;
 }
 
+.nav-list li {
+  width: 100%;
+}
+
 .navbar .header-element:hover,
 .navbar .header-element:focus {
   border-bottom: 2px solid white;
@@ -31,11 +36,33 @@
   color: white !important;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
   .navbar-expanded .navbar-nav {
     flex-direction: column;
     align-items: center;
   }
+
+  .navbar-expanded .navbar-nav li:nth-child(1){
+    order: 2;
+  }
+  .navbar-expanded .navbar-nav li:nth-child(2){
+    order: 3;
+  }
+  .navbar-expanded .navbar-nav li:nth-child(3){
+    order: 4;
+  }
+  .navbar-expanded .navbar-nav li:nth-child(4){
+    order: 5;
+  }
+  .navbar-expanded .navbar-nav li:nth-child(5){
+    order: 1;
+    padding-bottom: 10px;
+  }
+
+  .navbar-nav a.resume{
+    width: auto;
+  }
+
 
   .navbar-expanded .d-flex.align-items-center {
     flex-direction: column;

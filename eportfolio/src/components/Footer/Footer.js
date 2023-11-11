@@ -1,7 +1,9 @@
 import React from "react";
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="footer-content">
@@ -33,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-text">
-          <p>Design inspired by Brittany Chiang - Built by François Dion</p>
+          <p>{t("Design-inspired-by") + " - " + t("Built-by")}</p>
           
         </div>
       </div>

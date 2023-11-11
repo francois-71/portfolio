@@ -1,29 +1,29 @@
 import React from "react";
 import Skill from "../../components/Skill/Skill.js";
+import { useTranslation } from "react-i18next";
 import "./about.css";
 import { Link } from "react-router-dom";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="short-intro-container">
         <h1 className="name">François Dion</h1>
-        <h5 className="job-position"> Software Engineer </h5>
-        <p className="short-introduction">
-          Graduated from ISEP in 2023 with a Master's degree in Software
-          Engineering, my areas of expertise are web and software development. I
-          am always looking for new challenges and opportunities.
+        <h5 className="job-position">{t("Position")}</h5>
+        <div className="short-introduction">
+          {t("Small-Presentation")}
           <div className="explore-contact-container">
             <Link className="explore-contact" to="/contact">
               <div className="explore-contact-button">
                 <span className="explore-contact-arrow">&#8594;&nbsp;</span>
-                Let's talk ! &#x1F4E7;
+                {t("Lets-Talk")} &#x1F4E7;
               </div>
             </Link>
           </div>
-        </p>
-        <h3 className="skills">Skills</h3>
-        <h6 className="programming-languages">Programming languages</h6>
+        </div>
+        <h3 className="skills">{t("Skills")}</h3>
+        <h6 className="programming-languages">{t("Programming-Languages")}</h6>
         <div className="skills-container">
           <Skill name="Python" />
           <Skill name="Java" />
@@ -31,7 +31,7 @@ const About = () => {
           <Skill name="C++" />
           <Skill name="Golang" />
         </div>
-        <h6 className="web-frameworks"> Web frameworks / Web development </h6>
+        <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
         <div className="skills-container">
           <Skill name="Django" />
           <Skill name="Flask" />
@@ -39,66 +39,57 @@ const About = () => {
           <Skill name="HTML" />
           <Skill name="CSS" />
         </div>
-        <h6 className="tools">Version control</h6>
+        <h6 className="tools">{t("Version-Control")}</h6>
         <div className="skills-container">
           <Skill name="GitLab" />
           <Skill name="GitHub" />
         </div>
-        <h6 className="DevOps">DevOps</h6>
+        <h6 className="DevOps">{t("Devops")}</h6>
         <div className="skills-container">
           <Skill name="GitLab CI/CD" />
           <Skill name="Docker" />
         </div>
-        <h6 className="databases"> Databases </h6>
+        <h6 className="databases"> {t("Databases")} </h6>
         <div className="skills-container">
           <Skill name="PostgreSQL" />
         </div>
-        <h6 className="os">OS</h6>
+        <h6 className="os">{t("OS")}</h6>
         <div className="skills-container">
           <Skill name="Windows" />
           <Skill name="Linux" />
         </div>
-        <h6 className="Suites">Suites</h6>
+        <h6 className="Suites">{t("Suites")}</h6>
         <div className="skills-container">
           <Skill name="Office" />
           <Skill name="Google" />
         </div>
-        <h6 className="cloud">Cloud</h6>
+        <h6 className="cloud">{t("Cloud")}</h6>
         <div className="skills-container">
           <Skill name="AWS" />
         </div>
       </div>
       <div className="long-intro-container">
-        <h3 className="who-am-i">Who am I</h3>
+        <h3 className="who-am-i">{t("Who-Am-I")}</h3>
         <p className="description">
-          I am a{" "}
+          {t("Full-Presentation.Part-1-1")}&nbsp;
           <span className="description-strong">
-            Software Engineer/Developer from France
+          {t("Full-Presentation.Part-1-2")}
           </span>{" "}
-          with a strong interest in web and software. My journey into the world
-          of IT began during my academic pursuits, where I honed my skills in
-          web and software development. While I've recently graduated, I've
-          already had the opportunity to contribute to significant projects in
-          that area.
+          {t("Full-Presentation.Part-1-3")}
         </p>
         <p className="hobby">
-          Beyond my professional life, I have been a{" "}
-          <span className="description-strong">glider pilot for 7 years</span>{" "}
-          now and have held my glider pilot licence (SPL) since 2018. Aviation
-          is another area I am passionate about and is a hobby that provides me
-          with a sense of freedom and adventure.
+        {t("Full-Presentation.Part-2-1")}&nbsp;
+          <span className="description-strong">{t("Full-Presentation.Part-2-2")}</span>{" "}
+          {t("Full-Presentation.Part-2-3")}
         </p>
         <p className="background">
-          I was born in Paris in France and grew up in The Hague in the
-          Netherlands. My multicultural background has instilled in me a global
-          perspective and my experiences have taken me to various countries,
-          including South Korea, Australia, and The Netherlands.
+        {t("Full-Presentation.Part-3")}
         </p>
         <div className="explore-experience-container">
           <Link className="explore-experience" to="/experience">
             <div className="explore-my-experience-button">
               <span className="explore-experience-arrow">&#8594;&nbsp;</span>
-              View my experience &nbsp;&#x1F30D;
+              {t("View-my-experiences")} &nbsp;&#x1F30D;
             </div>
           </Link>
         </div>
@@ -106,7 +97,7 @@ const About = () => {
           <Link className="explore-projects" to="/projects">
             <div className="explore-my-projects-button">
               <span className="explore-projects-arrow">&#8594;&nbsp;</span>
-              Explore my projects &nbsp;&#x1F6A7;
+              {t("Explore-my-projects")} &nbsp;&#x1F6A7;
             </div>
           </Link>
         </div>
@@ -114,12 +105,12 @@ const About = () => {
           <Link className="explore-resume" to="/resume">
             <div className="explore-my-resume-button">
               <span className="explore-resume-arrow">&#8594;&nbsp;</span>
-              View my resume &#127919;
+              {t("View-my-resume")} &#127919;
             </div>
           </Link>
         </div>
         <div className="education-container">
-          <h3 className="education">Education</h3>
+          <h3 className="education">{t("Education")}</h3>
           <div className="education-text">
             <p className="education-text-1">
               <span className="education-text-bold">
@@ -128,10 +119,10 @@ const About = () => {
                   &#x1F1EB;&#x1F1F7;
                 </span>
               </span>
-              <br /> <i>Master in Software Engineering</i>
+              <br /> <i>{(t("Master-in-Software-Engineering"))}</i>
               <br />
               <span className="education-time-place">
-                Sep 2018 - Sep 2023 Paris, France
+                {t("Month-half.January")} 2018 - {t("Month-half.September")} 2023 {t("Paris")}, {t("France")}
               </span>
             </p>
             <p className="education-text-2">
@@ -140,10 +131,10 @@ const About = () => {
                   Griffith University &#x1F1E6;&#x1F1FA;
                 </span>
               </span>
-              <br /> <i>Computer Science, academic exchange</i>
+              <br /> <i>{t("Computer-Science")}, {t("Academic-exchange")}</i>
               <br />
               <span className="education-time-place">
-                Oct 2022 - Mar 2023 Brisbane, Australia
+              {t("Month-half.October")} - {t("Month-half.March")} 2023 {t("Brisbane")}, {t("Australia")}
               </span>
             </p>
             <p className="education-text-3">
@@ -152,21 +143,21 @@ const About = () => {
                   INHA University &#x1F1F0;&#x1F1F7;
                 </span>
               </span>
-              <br /> <i>Computer Science, academic exchange</i>
+              <br /> <i>{t("Computer-Science")}, {t("Academic-exchange")}</i>
               <br />
               <span className="education-time-place">
-                Feb 2020 - Jul 2020 Incheon, South Korea
+              {t("Month-half.February")} 2020 - {t("Month-half.July")} 2020 {t("Incheon")}, {t("South-Korea")}
               </span>
             </p>
             <p className="education-text-4">
               <span className="education-text-bold">
                 <span className="education-school">
-                  French High School of The Netherlands &#x1F1F3;&#x1F1F1;
+                  {t("High-School")} &#x1F1F3;&#x1F1F1;
                 </span>
               </span>
               <br />
               <span className="education-time-place">
-                ... - Jun 2018 The Hague, Netherlands
+                ... - {t("Month-half.June")} 2018 {t("The-Hague")}, {t("Netherlands")}
               </span>
             </p>
           </div>

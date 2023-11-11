@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./contact.css";
 import DOMPurify from "dompurify";
 
 function ContactMe() {
+  const { t } = useTranslation();
   function renderError(fieldName) {
     if (serverErrors) {
       if (serverErrors[fieldName]) {
@@ -135,23 +137,24 @@ function ContactMe() {
       {isSubmitted ? (
         <div className="container-success-message">
           <p className="success-message">
-            &#x1F4E7; Form submitted successfully! &#x1F4E7;
+            &#x1F4E7; {t("Form-submitted-successfully")} &#x1F4E7;
           </p>
-          <p className="success-message ">Redirecting in {countdown}... </p>
+          <p className="success-message ">
+            {t("Redirecting")} {countdown}...{" "}
+          </p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="form">
           <h5 className="form-title">
-            Let's get in touch! <br></br> Fill out the form below and I will get back to you
-            as soon as possible :)
+            {t("Title-contact-page-1")} <br></br> {t("Title-contact-page-2")}
           </h5>
 
           <div className="form-group">
             <label htmlFor="title" className="label">
-              Title: *
+              {t("Title")}: *
             </label>
             <input
-              placeholder="Title of your message"
+              placeholder={t("Title-placeholder")}
               type="text"
               id="title"
               value={formData.title}
@@ -164,10 +167,10 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="name" className="label">
-              Full Name: *
+              {t("Full-Name")}: *
             </label>
             <input
-              placeholder="Your full name"
+              placeholder={t("Full-Name-placeholder")}
               type="text"
               id="name"
               value={formData.name}
@@ -180,10 +183,10 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="email" className="label">
-              Email: *
+              {t("Email")}: *
             </label>
             <input
-              placeholder="contactme@example.com"
+              placeholder={t("Email-placeholder")}
               type="email"
               id="email"
               value={formData.email}
@@ -196,10 +199,10 @@ function ContactMe() {
           </div>
           <div className="form-group">
             <label htmlFor="message" className="label">
-              Message: *
+              {t("Message")}: *
             </label>
             <textarea
-              placeholder="limit: 1500 characters"
+              placeholder={t("Message-placeholder")}
               id="message"
               value={formData.message}
               onChange={(e) =>
@@ -210,13 +213,13 @@ function ContactMe() {
             {renderError("message")}
           </div>
           <button type="submit" className="submit-button">
-            Submit
+            {t("Submit")}
           </button>
         </form>
       )}
       <span className="contact-note">
-        Note: No information is stored on the server.
-      </span> 
+        {t("Note")}:&nbsp;{t("No-information-is-stored-on-the-server")}
+      </span>
       <div></div>
     </div>
   );

@@ -28,6 +28,7 @@ const ProjectComponent = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
 
   return (
     <tbody className="project-component-text">
