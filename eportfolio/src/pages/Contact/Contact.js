@@ -216,8 +216,6 @@ function ContactMe() {
       )}
       <span className="contact-note">
         Note: No information is stored on the server.
-        Récemment diplômé BAC+5 de l’ISEP, école d’ingénieur, je suis à la recherche d’une opportunité professionnelle dans le développement web ou logiciel. J’ai une forte appétence pour le design et la création
-        de solutions 0
       </span> 
       <div></div>
     </div>
