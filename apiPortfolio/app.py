@@ -24,7 +24,7 @@ app.debug = False
 def receive_data():
     data = request.get_json()
     if not data:
-        return jsonify({'message': 'No data provided'}), 400
+        return jsonify({'errors': 'No data provided'}), 400
     
     is_valid, error_message = check_input(data.get('name'), data.get('email'), data.get('message'), data.get('title'))
    

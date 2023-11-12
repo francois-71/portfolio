@@ -134,7 +134,7 @@ const About = () => {
               <br /> <i>{t("Computer-Science")}, {t("Academic-exchange")}</i>
               <br />
               <span className="education-time-place">
-              {t("Month-half.October")} - {t("Month-half.March")} 2023 {t("Brisbane")}, {t("Australia")}
+              {t("Month-half.October")} 2022 - {t("Month-half.March")} 2023 {t("Brisbane")}, {t("Australia")}
               </span>
             </p>
             <p className="education-text-3">
