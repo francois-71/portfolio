@@ -35,7 +35,7 @@ const Header = (props) => {
 
   return (
     <nav
-      className={`navbar sticky-top navbar-expand-xl px-5 ${
+      className={`logo-nav navbar sticky-top navbar-expand-xl ${
         isNavOpen ? "navbar-expanded" : ""
       }`}
     >

@@ -18,7 +18,7 @@ import smtplib
 app = Flask(__name__)
 
 load_dotenv()
-CORS(app, resources={r"/api/send-email": {"origins": "https://www.dionfrancois.com"}})
+CORS(app, resources={r"/api/send-email": {"origins": "*"}})
 app.debug = False
 @app.route('/api/send-email', methods=['POST'])
 def receive_data():
@@ -171,14 +171,16 @@ def check_input(name, email, message, title):
     if len(title) > 200:
         errors['title'] = 'Title is too long'
         
-    if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
         errors['email'] = 'Email is not valid'
-    
-    if not re.match(r"^[a-zA-Z]+(?:-[a-zA-Z]+)*$", name):
-        errors['name'] = 'Name only accepts letters and hyphens'
-        
-    if not re.match(r"^[a-zA-Z]+(?:-[a-zA-Z]+)*$", title):
-        errors['title'] = 'Title only accepts letters, hyphens and spaces'
+
+    # Check name
+    if not re.match(r'^[a-zA-Z ,.\'-]+$', name):
+        errors['name'] = 'Name only accepts letters, spaces, commas, periods, and hyphens'
+
+    # Check title
+    if not re.match(r'^[a-zA-Z ,.\'-]+$', title):
+        errors['title'] = 'Title only accepts letters, spaces, commas, periods, and hyphens'
         
     if errors:
         return False, errors

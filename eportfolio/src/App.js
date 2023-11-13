@@ -31,9 +31,7 @@ function App() {
   };
   return (
     <div className="App">
-      
       <Header handleScrollTop={handleScrollTop}></Header>
-      
       <div className="pages-container">
         <Routes>
           <Route path="/" element={<About />} />
