@@ -7,7 +7,6 @@ import Contact from "./pages/Contact/Contact";
 import Resume from "./pages/Resume/Resume";
 import NotFound from "./pages/NotFound/NotFound";
 import { Route, Routes } from "react-router-dom";
-import LanguageSelector from "./components/LanguageSelector/LanguageSelector";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 

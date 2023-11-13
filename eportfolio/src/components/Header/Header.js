@@ -47,6 +47,12 @@ const Header = (props) => {
         <Logo logo="/assets/media/images/francois-dion-logo.png" />
         {/* Replace the above line with the correct path and component for your logo */}
       </Link>
+      <Link
+        className="header-element nav-item nav-link mx-3 text-white"
+        style={{ borderBottom: "none" }}
+      >
+        <LanguageSelector />
+      </Link>
 
       <button
         className={`navbar-toggler ${isNavOpen ? "collapsed" : ""}`}
@@ -56,7 +62,8 @@ const Header = (props) => {
         aria-label="Toggle navigation"
         style={{ backgroundColor: "white", color: "black" }}
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"
+        style={{paddingLeft: "30px"}}></span>
       </button>
 
       <div
@@ -70,7 +77,7 @@ const Header = (props) => {
         >
           <li>
             <Link
-              className="header-element nav-item nav-link mx-3 text-white"
+              className="about header-element nav-item nav-link mx-3 text-white"
               to="/about"
               onClick={closeNav}
             >
@@ -79,7 +86,7 @@ const Header = (props) => {
           </li>
           <li>
             <Link
-              className="header-element nav-item nav-link mx-3 text-white"
+              className="experience header-element nav-item nav-link mx-3 text-white"
               to="/experience"
               onClick={closeNav}
             >
@@ -88,7 +95,7 @@ const Header = (props) => {
           </li>
           <li>
             <Link
-              className="header-element nav-item nav-link mx-3 text-white"
+              className="projects header-element nav-item nav-link mx-3 text-white"
               to="/projects"
               onClick={closeNav}
             >
@@ -97,16 +104,11 @@ const Header = (props) => {
           </li>
           <li>
             <Link
-              className="header-element nav-item nav-link mx-3 text-white"
+              className="contact header-element nav-item nav-link mx-3 text-white"
               to="/contact"
               onClick={closeNav}
             >
               &#x1F4E7; {t("Contact")}
-            </Link>
-          </li>
-          <li>
-            <Link className="header-element nav-item nav-link mx-3 text-white">
-                <LanguageSelector />
             </Link>
           </li>
         </ul>

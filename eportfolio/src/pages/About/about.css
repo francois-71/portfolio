@@ -1,16 +1,64 @@
 .short-introduction,
 .description,
 .hobby,
-.background {
+.background,
+.small-presentation-text {
   color: var(--p-color-cv) !important;
 }
 
-.description-strong{
+.description-strong {
   color: var(--h5-color-cv) !important;
   font-weight: 500;
 }
 .job-position {
   color: var(--explore-my-project-color-cv) !important;
+}
+
+.short-intro-text-images {
+  display:flex;
+}
+/* 58 + 125*/
+
+@media(max-width: 768px) {
+  
+}
+
+.short-intro-text-images-left{
+  width: 70%;
+  padding-right: 40px;
+}
+
+@media(max-width: 768px) {
+  .short-intro-text-images-left{
+    width: 100%;
+    padding-right: 0px;
+  }
+  .short-intro-text-images-right{
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .short-intro-text-images {
+    flex-direction: column;
+  }
+  .francois-image {
+    width: 50% !important;
+    justify-content: center;
+  }
+  .explore-contact{
+    justify-content: center;
+  }
+}
+
+.short-intro-text-images-right{
+  padding-top: 20px;
+  width: 30%;
+}
+
+.francois-image {
+  width: 100%;
+  border-radius: 100%;
+  border : 4px solid var(--explore-my-project-color-cv);
 }
 
 .who-am-i {
@@ -28,7 +76,7 @@
 }
 
 .short-introduction {
-  max-width: 20rem;
+  max-width: 28rem;
   font-size: 16px;
 }
 
@@ -59,7 +107,7 @@
   text-decoration: none;
 }
 
-.explore-contact { 
+.explore-contact {
   display: flex;
   padding-top: 30px;
   text-decoration: none;
@@ -91,7 +139,8 @@
   color: var(--explore-my-project-color-cv);
 }
 
-.explore-projects-container, .explore-resume-container {
+.explore-projects-container,
+.explore-resume-container {
   padding-top: 7px;
 }
 

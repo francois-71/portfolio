@@ -9,10 +9,22 @@ const About = () => {
   return (
     <div className="container">
       <div className="short-intro-container">
-        <h1 className="name">François Dion</h1>
-        <h5 className="job-position">{t("Position")}</h5>
+        
+        <div className="short-intro-text-images">
+          <div className="short-intro-text-images-left">
+          <h1 className="name">François Dion</h1>
+            <h5 className="job-position">{t("Position")}</h5>
+            <p className="small-presentation-text">{t("Small-Presentation")}</p>
+          </div>
+          <div className="short-intro-text-images-right">
+            <img
+              className="francois-image"
+              src="assets/media/images/you_download_my_picture_because_I_am_cute.png"
+              alt="logo"
+            />
+          </div>
+        </div>
         <div className="short-introduction">
-          {t("Small-Presentation")}
           <div className="explore-contact-container">
             <Link className="explore-contact" to="/contact">
               <div className="explore-contact-button">
@@ -73,18 +85,18 @@ const About = () => {
         <p className="description">
           {t("Full-Presentation.Part-1-1")}&nbsp;
           <span className="description-strong">
-          {t("Full-Presentation.Part-1-2")}
+            {t("Full-Presentation.Part-1-2")}
           </span>{" "}
           {t("Full-Presentation.Part-1-3")}
         </p>
         <p className="hobby">
-        {t("Full-Presentation.Part-2-1")}&nbsp;
-          <span className="description-strong">{t("Full-Presentation.Part-2-2")}</span>{" "}
+          {t("Full-Presentation.Part-2-1")}&nbsp;
+          <span className="description-strong">
+            {t("Full-Presentation.Part-2-2")}
+          </span>{" "}
           {t("Full-Presentation.Part-2-3")}
         </p>
-        <p className="background">
-        {t("Full-Presentation.Part-3")}
-        </p>
+        <p className="background">{t("Full-Presentation.Part-3")}</p>
         <div className="explore-experience-container">
           <Link className="explore-experience" to="/experience">
             <div className="explore-my-experience-button">
@@ -119,10 +131,11 @@ const About = () => {
                   &#x1F1EB;&#x1F1F7;
                 </span>
               </span>
-              <br /> <i>{(t("Master-in-Software-Engineering"))}</i>
+              <br /> <i>{t("Master-in-Software-Engineering")}</i>
               <br />
               <span className="education-time-place">
-                {t("Month-half.January")} 2018 - {t("Month-half.September")} 2023 {t("Paris")}, {t("France")}
+                {t("Month-half.January")} 2018 - {t("Month-half.September")}{" "}
+                2023 {t("Paris")}, {t("France")}
               </span>
             </p>
             <p className="education-text-2">
@@ -131,10 +144,14 @@ const About = () => {
                   Griffith University &#x1F1E6;&#x1F1FA;
                 </span>
               </span>
-              <br /> <i>{t("Computer-Science")}, {t("Academic-exchange")}</i>
+              <br />{" "}
+              <i>
+                {t("Computer-Science")}, {t("Academic-exchange")}
+              </i>
               <br />
               <span className="education-time-place">
-              {t("Month-half.October")} 2022 - {t("Month-half.March")} 2023 {t("Brisbane")}, {t("Australia")}
+                {t("Month-half.October")} 2022 - {t("Month-half.March")} 2023{" "}
+                {t("Brisbane")}, {t("Australia")}
               </span>
             </p>
             <p className="education-text-3">
@@ -143,10 +160,14 @@ const About = () => {
                   INHA University &#x1F1F0;&#x1F1F7;
                 </span>
               </span>
-              <br /> <i>{t("Computer-Science")}, {t("Academic-exchange")}</i>
+              <br />{" "}
+              <i>
+                {t("Computer-Science")}, {t("Academic-exchange")}
+              </i>
               <br />
               <span className="education-time-place">
-              {t("Month-half.February")} 2020 - {t("Month-half.July")} 2020 {t("Incheon")}, {t("South-Korea")}
+                {t("Month-half.February")} 2020 - {t("Month-half.July")} 2020{" "}
+                {t("Incheon")}, {t("South-Korea")}
               </span>
             </p>
             <p className="education-text-4">
@@ -157,7 +178,8 @@ const About = () => {
               </span>
               <br />
               <span className="education-time-place">
-                ... - {t("Month-half.June")} 2018 {t("The-Hague")}, {t("Netherlands")}
+                ... - {t("Month-half.June")} 2018 {t("The-Hague")},{" "}
+                {t("Netherlands")}
               </span>
             </p>
           </div>

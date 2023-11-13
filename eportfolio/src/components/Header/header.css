@@ -4,15 +4,28 @@
   font-weight: 600;
   color: var(--header-text-color-cv) !important;
   text-align: center;
-  width: 125px;
+  width: 130px;
+}
+
+a.about,
+a.experience,
+a.projects,
+a.contact,
+a.resume{
+  padding-right: 15px;
 }
 
 .navbar {
   background-color: var(--app-background-color-cv);
 }
 
+.navbar-brand{
+  margin-right: 0 !important;
+}
 .navbar-nav a.resume{
   width: 100px;
+  cursor: pointer;
+  margin-left: 125px !important; /* 125px to compensate the language switcher on the left*/
 }
 
 .form-title {
@@ -61,6 +74,7 @@
 
   .navbar-nav a.resume{
     width: auto;
+    margin-left: 0 !important;
   }
 
 

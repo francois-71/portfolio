@@ -90,6 +90,7 @@ const Project = () => {
                 made_at="ISEP (Paris, France)"
                 built_with={[
                   <Skill key="1" name="C++" />,
+                  <Skill key="2" name="OpenCV" />,
                 ]}
                 link="https://github.com/francois-71/gimpsep-opencv_caf/"
                 show_link="github.com/francois-71/gimpsep-opencv_caf/"
