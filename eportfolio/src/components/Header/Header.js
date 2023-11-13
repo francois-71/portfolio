@@ -51,7 +51,7 @@ const Header = (props) => {
         className="header-element nav-item nav-link mx-3 text-white"
         style={{ borderBottom: "none" }}
       >
-        <LanguageSelector />
+        <LanguageSelector onLanguageChange={closeNav} />
       </Link>
 
       <button
