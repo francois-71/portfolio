@@ -43,11 +43,11 @@ const ProjectComponent = ({
             ) : isLinkNotEmpty && index === 4 ? (
               <a className="clickable-links" href={link} target="_blank" rel="noreferrer">
                 <span className="arrow">&#8594;&nbsp;</span>
-                <span className="link-text">{show_link}</span>
+                <span className="link-text-last-index">{show_link}</span>
               </a>
             ) : !isLinkNotEmpty && index === 4 ? (
               <span className="not-clickable-links" href={link}>
-                <span className="link-text">{show_link}</span>
+                <span className="link-text-last-index">{show_link}</span>
                 <span className="arrow"></span>
               </span>
             ) : (

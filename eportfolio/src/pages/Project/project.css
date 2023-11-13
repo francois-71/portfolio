@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 572px) {
+@media (max-width: 630px) {
   .project-table-container table th:nth-child(3),
   .project-table-container table tr td:nth-child(3) {
     display: none;

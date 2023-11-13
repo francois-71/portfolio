@@ -114,8 +114,6 @@ const Project = () => {
                 link="https://github.com/francois-71/MrJackPocketFPW"
                 show_link="github.com/francois-71/MrJackPocketFPW"
               />
-              
-                
             </table>
           </div>
         </div>
