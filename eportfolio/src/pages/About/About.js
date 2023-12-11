@@ -47,6 +47,7 @@ const About = () => {
         <div className="skills-container">
           <Skill name="Django" />
           <Skill name="Flask" />
+          <Skill name="Gin" />
           <Skill name="React" />
           <Skill name="HTML" />
           <Skill name="CSS" />
@@ -64,6 +65,7 @@ const About = () => {
         <h6 className="databases"> {t("Databases")} </h6>
         <div className="skills-container">
           <Skill name="PostgreSQL" />
+          <Skill name="MongoDB" />
         </div>
         <h6 className="os">{t("OS")}</h6>
         <div className="skills-container">
