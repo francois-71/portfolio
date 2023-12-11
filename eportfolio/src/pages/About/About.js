@@ -57,7 +57,7 @@ const About = () => {
           <Skill name="GitLab" />
           <Skill name="GitHub" />
         </div>
-        <h6 className="DevOps">{t("Devops")}</h6>
+        <h6 className="DevOps">{t("DevOps")}</h6>
         <div className="skills-container">
           <Skill name="GitLab CI/CD" />
           <Skill name="Docker" />
