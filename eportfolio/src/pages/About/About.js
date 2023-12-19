@@ -6,6 +6,18 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   const { t } = useTranslation();
+
+  const colors = {
+    constColorDev: {
+      color: "orange",
+      BackgroundColor: "rgba(255, 165, 0, 0.1)",
+    },
+    constColorDefault: {
+      color: "rgb(94 234 212)",
+      BackgroundColor: "rgba(45, 212, 191, 0.1)",
+    },
+  };
+
   return (
     <div className="container">
       <div className="short-intro-container">
@@ -37,49 +49,49 @@ const About = () => {
         <h3 className="skills">{t("Skills")}</h3>
         <h6 className="programming-languages">{t("Programming-Languages")}</h6>
         <div className="skills-container">
-          <Skill name="Python" />
-          <Skill name="Java" />
-          <Skill name="JavaScript" />
-          <Skill name="C++" />
-          <Skill name="Golang" />
+          <Skill name="Python" constColor={colors.constColorDefault}/>
+          <Skill name="Java" constColor={colors.constColorDefault}/>
+          <Skill name="JavaScript" constColor={colors.constColorDefault}/>
+          <Skill name="C++" constColor={colors.constColorDefault}/>
+          <Skill name="Golang" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
         <div className="skills-container">
-          <Skill name="Django" />
-          <Skill name="Flask" />
-          <Skill name="Gin" />
-          <Skill name="React" />
-          <Skill name="HTML" />
-          <Skill name="CSS" />
+          <Skill name="Django" constColor={colors.constColorDefault}/>
+          <Skill name="Flask" constColor={colors.constColorDefault}/>
+          <Skill name="Gin" constColor={colors.constColorDefault}/>
+          <Skill name="React" constColor={colors.constColorDefault}/>
+          <Skill name="HTML" constColor={colors.constColorDefault}/>
+          <Skill name="CSS" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="tools">{t("Version-Control")}</h6>
         <div className="skills-container">
-          <Skill name="GitLab" />
-          <Skill name="GitHub" />
+          <Skill name="GitLab" constColor={colors.constColorDefault}/>
+          <Skill name="GitHub" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="DevOps">{t("DevOps")}</h6>
         <div className="skills-container">
-          <Skill name="GitLab CI/CD" />
-          <Skill name="Docker" />
+          <Skill name="GitLab CI/CD" constColor={colors.constColorDefault}/>
+          <Skill name="Docker" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="databases"> {t("Databases")} </h6>
         <div className="skills-container">
-          <Skill name="PostgreSQL" />
-          <Skill name="MongoDB" />
+          <Skill name="PostgreSQL" constColor={colors.constColorDefault}/>
+          <Skill name="MongoDB" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="os">{t("OS")}</h6>
         <div className="skills-container">
-          <Skill name="Windows" />
-          <Skill name="Linux" />
+          <Skill name="Windows" constColor={colors.constColorDefault}/>
+          <Skill name="Linux" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="Suites">{t("Suites")}</h6>
         <div className="skills-container">
-          <Skill name="Office" />
-          <Skill name="Google" />
+          <Skill name="Office" constColor={colors.constColorDefault}/>
+          <Skill name="Google" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="cloud">{t("Cloud")}</h6>
         <div className="skills-container">
-          <Skill name="AWS" />
+          <Skill name="AWS" constColor={colors.constColorDefault}/>
         </div>
       </div>
       <div className="long-intro-container">

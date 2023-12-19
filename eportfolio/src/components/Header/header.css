@@ -1,6 +1,5 @@
 .navbar .header-element {
   text-decoration: none;
-  border-bottom: 2px solid transparent;
   font-weight: 600;
   color: var(--header-text-color-cv) !important;
   text-align: center;
@@ -44,9 +43,7 @@ a.resume{
 
 .navbar .header-element:hover,
 .navbar .header-element:focus {
-  border-bottom: 2px solid white;
-  transition: border-bottom 0.4s ease-in-out;
-  color: white !important;
+  color: var(--explore-my-project-color-cv) !important;
 }
 
 .logo-nav{

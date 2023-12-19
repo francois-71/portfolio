@@ -35,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-text">
-          <p>{t("Design-inspired-by") + " - " + t("Built-by")}</p>
+          <p>{t("Name")}</p>
           
         </div>
       </div>

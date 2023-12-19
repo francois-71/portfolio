@@ -6,6 +6,20 @@
   color: var(--h1-color-cv) !important;
 }
 
+.contact-projects{
+  color: var(--h1-color-cv) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-projects:hover{
+  color: var(--explore-my-project-color-cv) !important
+}
+
+.skill-categories{
+  padding: 7px 0;
+}
+
 .container {
   justify-content: center;
   margin-top: 50px;
@@ -15,6 +29,11 @@
 .project-item-container {
   display: flex;
   flex-direction: column;
+}
+
+.project-notice{
+  color: var(--h1-color-cv) !important;
+  font-size: 14px;
 }
 
 .project-table-container {
@@ -35,6 +54,13 @@
   font-size: 20px;
 }
 
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
 @media (max-width: 986px) {
   .project-table-container table thead tr th:nth-child(5) {
     display: none;
@@ -49,6 +75,10 @@
 @media (max-width: 768px) {
   .project-table-container table th:nth-child(4),
   .project-table-container table tr td:nth-child(4) {
+    display: none;
+  }
+
+  .skill-categories {
     display: none;
   }
 }
