@@ -48,7 +48,7 @@ const About = () => {
         </div>
         <h3 className="skills">{t("Skills")}</h3>
         <h6 className="programming-languages">{t("Programming-Languages")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="Python" constColor={colors.constColorDefault}/>
           <Skill name="Java" constColor={colors.constColorDefault}/>
           <Skill name="JavaScript" constColor={colors.constColorDefault}/>
@@ -56,7 +56,7 @@ const About = () => {
           <Skill name="Golang" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="Django" constColor={colors.constColorDefault}/>
           <Skill name="Flask" constColor={colors.constColorDefault}/>
           <Skill name="Gin" constColor={colors.constColorDefault}/>
@@ -65,32 +65,32 @@ const About = () => {
           <Skill name="CSS" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="tools">{t("Version-Control")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="GitLab" constColor={colors.constColorDefault}/>
           <Skill name="GitHub" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="DevOps">{t("DevOps")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="GitLab CI/CD" constColor={colors.constColorDefault}/>
           <Skill name="Docker" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="databases"> {t("Databases")} </h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="PostgreSQL" constColor={colors.constColorDefault}/>
           <Skill name="MongoDB" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="os">{t("OS")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="Windows" constColor={colors.constColorDefault}/>
           <Skill name="Linux" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="Suites">{t("Suites")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="Office" constColor={colors.constColorDefault}/>
           <Skill name="Google" constColor={colors.constColorDefault}/>
         </div>
         <h6 className="cloud">{t("Cloud")}</h6>
-        <div className="skills-container">
+        <div className="skills-container-about">
           <Skill name="AWS" constColor={colors.constColorDefault}/>
         </div>
       </div>
