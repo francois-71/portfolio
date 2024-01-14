@@ -42,6 +42,13 @@ const Experience = () => {
                 company_logo="/assets/media/images/airfrance-logo.png"
                 job_title={t("Job-Description.Customer-Service-Agent")}
               />
+              <ExperienceComponent
+                period={t("Month-full.January") + " 2020 - " + t("Month-full.February") + " 2020"}
+                company={t("salvation-army") + " (Paris, France)"}
+                company_url="https://www.salvationarmy.org/"
+                company_logo="/assets/media/images/salvation-army-logo.png"
+                job_title={t("volunteer")}
+              />
             </table>
           </div>
         </div>
