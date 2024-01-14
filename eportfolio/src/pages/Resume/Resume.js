@@ -11,8 +11,13 @@ const Resume = () => {
       <a href={pdfPath} download="François_Dion_Resume.pdf">
         <p>&#x1F4E5; {t("download-my-resume")}</p>
       </a>
+      <div className="last-updated-on">{t("last-updated-on")} 2023/11/29 </div>
       <div className="resume-image">
-        <img src={imageSrc} alt="François Dion's Resume" className="resume-image" />
+        <img
+          src={imageSrc}
+          alt="François Dion's Resume"
+          className="resume-image"
+        />
       </div>
     </div>
   );

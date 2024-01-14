@@ -36,6 +36,12 @@
   display: block; 
 }
 
+.last-updated-on{
+  color: var(--h1-color-cv);
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
   .resume-image {

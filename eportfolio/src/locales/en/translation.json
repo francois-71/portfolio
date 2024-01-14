@@ -17,7 +17,7 @@
         "Part-1-2": "Software Engineer/Developer from France",
         "Part-1-3": "with a strong interest in web and software. My journey into the world of IT began during my academic pursuits, where I honed my skills in web and software development. While I've recently graduated, I've already had the opportunity to contribute to significant projects in that area.",
         "Part-2-1": "Beyond my professional life, I have been a",
-        "Part-2-2": "glider pilot for 7 years now",
+        "Part-2-2": "glider pilot for 8 years now",
         "Part-2-3": "and have held my glider pilot licence (SPL) since 2018. Aviation is another area I am passionate about and is a hobby that provides me with a sense of freedom and adventure.",
         "Part-3": "I was born in Paris in France and grew up in The Hague in the Netherlands. My multicultural background has instilled in me a global perspective and my experiences have taken me to various countries, including South Korea, Australia, and The Netherlands."
     },
@@ -119,6 +119,7 @@
     "Built-by": "Built by François Dion",
     "Name": "François Dion",
     "download-my-resume": "Download my resume (English)",
+    "last-updated-on": "Last updated on:",
     "path-to-resume": "assets/media/images/cv_en_francois_dion_portfolio.png",
     "resume-to-download": "assets/media/cv_en_francois_dion_portfolio.pdf"
 }

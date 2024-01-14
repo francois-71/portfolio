@@ -22,7 +22,7 @@ const Experience = () => {
                 </tr>
               </thead>
               <ExperienceComponent
-                period={t("Month-full.March") + " 2023 - " + t("Present")}
+                period={t("Month-full.March") + " 2023 - " + t("Month-full.January") + " 2024"}
                 company="Devoteam Innovative Tech (Paris, France)"
                 company_url="https://france.devoteam.com/expertises/innovative-tech/"
                 company_logo="/assets/media/images/devoteam-logo.png"
@@ -32,7 +32,7 @@ const Experience = () => {
                 period={t("Month-full.September") + " 2021 - " + t("Month-full.May") + " 2022 " }
                 company="Stations-e (Paris, France)"
                 company_url="https://stations-e.com/"
-                company_logo="/assets/media/images/stations-e-logo.png"
+                company_logo="/assets/media/images/stationselogo.png"
                 job_title={t("Job-Description.Front-end-Developer")}
               />
               <ExperienceComponent

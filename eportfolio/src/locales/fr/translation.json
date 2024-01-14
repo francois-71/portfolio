@@ -17,7 +17,7 @@
         "Part-1-2": "ingénieur logiciel/développeur français",
         "Part-1-3": "avec un fort intérêt pour le web et le logiciel. Bien que récemment diplômé, j'ai déjà eu l'occasion de contribuer à des projets importants dans ce domaine.",
         "Part-2-1": "Au-delà de ma vie professionnelle, je suis",
-        "Part-2-2": "pilote de planeur depuis 7 ans",
+        "Part-2-2": "pilote de planeur depuis 8 ans",
         "Part-2-3": "et titulaire de ma licence de pilote de planeur (SPL) depuis 2018. L'aviation est un autre domaine qui me passionne et un hobby qui me procure un sentiment de liberté et d'aventure.",
         "Part-3": "Je suis né à Paris en France et j'ai grandi à La Haye aux Pays-Bas. Mes expériences m'ont amenée dans différents pays, notamment en Corée du Sud, en Australie et aux Pays-Bas."
     },
@@ -119,6 +119,7 @@
     "Built-by": "Développé par François Dion",
     "Name": "François Dion",
     "download-my-resume": "Télécharger mon CV (Français)",
+    "last-updated-on": "Modifié le:",
     "path-to-resume": "assets/media/images/cv_fr_francois_dion_portfolio.png",
     "resume-to-download": "assets/media/cv_fr_francois_dion_portfolio.pdf"
 }
