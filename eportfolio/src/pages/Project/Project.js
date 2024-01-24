@@ -216,8 +216,8 @@ const Project = () => {
                     constColor={colors.constColorDefault}
                   />,
                 ]}
-                link="https://github.com/francois-71/portfolio"
-                show_link="github.com/francois-71/portfolio"
+                link=""
+                show_link="&#x1F510;"
               />
               <ProjectComponent
                 year="2023"
