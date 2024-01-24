@@ -53,6 +53,30 @@ const Project = () => {
                 </tr>
               </thead>
               <ProjectComponent
+                year="2024"
+                project={t("NginxLogsAnalyzer")}
+                made_at="&#x1F3E0;"
+                built_with={[
+                  <Skill
+                    key="1"
+                    name="Flask"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="2"
+                    name="React"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="3"
+                    name="CSS"
+                    constColor={colors.constColorDefault}
+                  />,
+                ]}
+                link="https://github.com/francois-71/NginxLogAnalyzer"
+                show_link="github.com/francois-71/NginxLogAnalyzer"
+              />
+              <ProjectComponent
                 year="2023"
                 project={t("DFHousing") + " (" + t("In-development") + ")"}
                 made_at="&#x1F3E0;"
@@ -270,8 +294,8 @@ const Project = () => {
                     constColor={colors.constColorDefault}
                   />,
                 ]}
-                link=""
-                show_link="&#x1F510;"
+                link="https://github.com/francois-71/bouncing-ball-js"
+                show_link="github.com/francois-71/bouncing-ball-js"
               />
               <ProjectComponent
                 year="2022"
@@ -314,7 +338,7 @@ const Project = () => {
                   />,
                 ]}
                 link="https://github.com/francois-71/gimpsep-opencv_caf/"
-                show_link="github.com/francois-71/gimpsep-opencv_caf/"
+                show_link="github.com/francois-71/gimpsep-opencv_caf"
               />
               <ProjectComponent
                 year="2021"

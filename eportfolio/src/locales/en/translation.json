@@ -85,6 +85,7 @@
     "Skill-default-text": "Added",
     "Skill-futur-addition": "Future addition",
     "Projects-description-notice": "I am currently working on the description of each project where you will be able to find more information about them. In the meantime, you can click on the links to access my projects or contact me directly here:",
+    "NginxLogsAnalyzer": "A web application which let you load your NGINX logs and give you information about IPs that made HTTP/s requests to your server.",
     "DFHousing": "DFHousing: A web application to rent and manage your properties online",
     "Portfolio": "Portfolio",
     "Api-development-monitoring-interface": "API Development & Monitoring Interface. Service: 'Virtual Machine on demand'",
