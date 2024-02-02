@@ -23,7 +23,7 @@ services:
     image: certbot/certbot
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot/.well-known/acme-challenge/
+      - ./data/certbot/www:/var/www/certbot
 
   
     
