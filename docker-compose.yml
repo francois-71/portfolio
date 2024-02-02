@@ -6,8 +6,8 @@ services:
     networks:
       - portfolionetwork
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./nginx/conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www/:/var/www/certbot/:ro
     ports:
       - "80:80" # Forward port 80 on the host to port 80 on the container
       - "443:443" # Forward port 443 on the host to port 443 on the container
@@ -20,10 +20,10 @@ services:
       - portfolionetwork
 
   certbot:
-    image: certbot/certbot
+    image: certbot/certbot:latest
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
 
   
     
