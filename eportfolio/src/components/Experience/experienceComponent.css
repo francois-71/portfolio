@@ -1,9 +1,11 @@
 .experience-component-text tr td:nth-child(1) {
   color: var(--p-color-cv);
+  
 }
 
 .experience-component-text tr td:nth-child(3) {
-  color: var(--h1-color-cv);
+  color: var(--h3-color-cv);
+  font-weight: bold;
 }
 
 .experience-component-text tr td:nth-child(4) {
@@ -16,6 +18,7 @@
 
 .experience-component-text tr {
   border-bottom: 1px solid rgb(220, 220, 220, 0.1);
+  height: 140px;
 
 }
 

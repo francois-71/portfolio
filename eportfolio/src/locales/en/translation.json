@@ -1,5 +1,5 @@
 {    
-    "Position" : "Software Engineer",
+    "Position" : "Full-Stack Engineer",
     "Small-Presentation" : "Graduated from ISEP in 2023 with a Master's degree in Software Engineering, my areas of expertise are web and software development. I am always looking for new challenges and opportunities.",
     "Lets-Talk" : "Let's connect !",
     "Skills" : "Skills",
@@ -70,7 +70,7 @@
     "Year": "Year",
     "Logo": "Logo",
     "Company": "Company",
-    "Job-Title": "Job Title",
+    "Job-Title": "Title",
     "Job-Description": {
         "Python-DevOps-Developer": "Python DevOps Developer (Internship then full-time)",
         "Front-end-Developer": "Front-end Developer (Internship then part-time while concurrently pursuing my studies)",

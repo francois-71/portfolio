@@ -75,6 +75,35 @@
   max-width: 20rem;
 }
 
+.social-links-about {
+  padding-bottom: 20px;
+}
+.social-links-content {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.social-links-about a {
+  margin: 0 20px 0 0;
+  font-size: 25px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: rgba(148,163, 184, 0.5) !important;
+}
+
+.github-logo:hover {
+  color: #e8eaea !important;
+}
+
+.linkedin-logo:hover {
+  color: #0077B5 !important;
+}
+
+.instagram-logo:hover {
+  color: #E1306C !important;
+}
+
+
 .short-introduction {
   max-width: 28rem;
   font-size: 16px;
