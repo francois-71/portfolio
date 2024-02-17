@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/About/About";
 import Experience from "./pages/Experience/Experience";
+import NewExperience from "./pages/Experience/NewExperience";
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
 import Resume from "./pages/Resume/Resume";
@@ -36,7 +37,8 @@ function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
+          <Route path="/experience" element={<NewExperience />} />
+          <Route path="/new-experience" element={<NewExperience />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />

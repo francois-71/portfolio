@@ -22,6 +22,13 @@ const Experience = () => {
                 </tr>
               </thead>
               <ExperienceComponent
+                period={t("Month-full.February") + " 2024 - " + t("Present")}
+                company="Moment (Paris, France)"
+                company_url="https://www.moment.tech/"
+                company_logo="/assets/media/images/moment_solutions_logo.svg"
+                job_title={t("Job-Description.Full-Stack-Engineer-Developer")}
+              />
+              <ExperienceComponent
                 period={t("Month-full.March") + " 2023 - " + t("Month-full.January") + " 2024"}
                 company="Devoteam Innovative Tech (Paris, France)"
                 company_url="https://france.devoteam.com/expertises/innovative-tech/"

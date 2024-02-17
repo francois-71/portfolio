@@ -1,0 +1,55 @@
+.experience-container {
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1400px;
+  width: 80%;
+}
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 520px; /* add 130px per experience component, it's dirty but it works */
+}
+
+.experience-components-right {
+  width: 90%;
+  height: 100%;
+}
+
+.experience-components-left {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-line {
+  width: 2px;
+  height: calc(100% - 140px);
+  background-color: var(--explore-my-project-color-cv); 
+}
+
+.experience-disk {
+  width: 20px;
+  height: 20px;
+  background-color: var(--explore-my-project-color-cv);
+  border-radius: 50%;
+}
+
+.experience-horizontal-start-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--explore-my-project-color-cv);
+}
+
+@media screen and (max-width: 768px) {
+  .experience-components-left{
+    display: none;
+  }
+}

@@ -72,9 +72,10 @@
     "Company": "Entreprise",
     "Job-Title": "Poste",
     "Job-Description": {
-        "Python-DevOps-Developer": "Développeur Python DevOps (Stage puis CDI)",
-        "Front-end-Developer": "Développeur Front-end (Stage puis Temps partiel en parallèle de mes études)",
-        "Customer-Service-Agent": "Agent de Service au Client (Saisonnier)"
+        "Python-DevOps-Developer": "Développeur Python DevOps",
+        "Front-end-Developer": "Développeur Front-end",
+        "Customer-Service-Agent": "Agent de Service au Client (Saisonnier)",
+        "Full-Stack-Engineer-Developer": "Ingénieur Full-Stack"
     },
     "Project": "Projet",
     "Made-at": "Réalisé à",
@@ -124,5 +125,5 @@
     "path-to-resume": "assets/media/images/cv_fr_francois_dion_portfolio.png",
     "resume-to-download": "assets/media/cv_fr_francois_dion_portfolio.pdf",
     "salvation-army": "Armée du Salut",
-    "volunteer": "Bénévole à temps plein en attendant mon départ en échange universitaire"
+    "volunteer": "Bénévole"
 }
