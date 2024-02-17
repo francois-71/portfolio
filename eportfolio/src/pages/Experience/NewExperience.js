@@ -8,7 +8,7 @@ const NewExperience = () => {
   return (
     <div className="experience-container">
       <div className="experience-item-container">
-        <h1>François Dion</h1>
+        <h1 className="experience-full-name">François Dion</h1>
         <h2 className="experience-all-project">{t("Experience")}</h2>
         <div className="experience-wrapper">
           <div className="experience-components-left">

@@ -64,6 +64,7 @@
 
   .unique-experience-wrapper {
     width: 100%;
+    height: auto;
   }
 
   .unique-experience-text,
@@ -83,5 +84,9 @@
     font-size: 30px;
     color: var(--h6-color-cv);
     text-align: center;
+  }
+
+  .experience-mobile-arrow:last-child {
+    display: none;
   }
 }

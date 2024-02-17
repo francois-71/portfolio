@@ -52,4 +52,12 @@
   .experience-components-left{
     display: none;
   }
+
+  .experience-full-name {
+    text-align: center;
+  }
+
+  .experience-item-container{
+    text-align: center;
+  }
 }
