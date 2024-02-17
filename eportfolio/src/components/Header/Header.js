@@ -60,10 +60,21 @@ const Header = (props) => {
         onClick={toggleNav}
         aria-controls="navbarNavAltMarkup"
         aria-label="Toggle navigation"
-        style={{ backgroundColor: "white", color: "black" }}
+        style={{
+          backgroundColor: isNavOpen ? "rgb(45, 212, 191, 0.1)" : "transparent",
+          color: isNavOpen ? "#000" : "#fff",
+          border: "none", // Remove border
+          borderRadius: "12px",
+          padding: "8px 12px",
+          outline: "none",
+          transition: "background-color 0.3s, color 0.3s",
+          boxShadow: "none", // Remove box shadow
+        }}
       >
-        <span className="navbar-toggler-icon"
-        style={{paddingLeft: "30px"}}></span>
+        <span
+          className="navbar-toggler-icon"
+          style={{ paddingLeft: "30px" }}
+        ></span>
       </button>
 
       <div
