@@ -91,8 +91,10 @@ const Header = (props) => {
               className="about header-element nav-item nav-link mx-3 text-white"
               to="/about"
               onClick={closeNav}
+              style={{ paddingRight: "0px" }}
             >
               &#x1F9B4; {t("About")}
+
             </Link>
           </li>
           <li>
@@ -100,6 +102,7 @@ const Header = (props) => {
               className="experience header-element nav-item nav-link mx-3 text-white"
               to="/experience"
               onClick={closeNav}
+              style={{ paddingRight: "0px" }}
             >
               &#x1F30D; {t("Experience")}
             </Link>
@@ -109,6 +112,7 @@ const Header = (props) => {
               className="projects header-element nav-item nav-link mx-3 text-white"
               to="/projects"
               onClick={closeNav}
+              style={{ paddingRight: "0px" }}
             >
               &#x1F6A7; {t("Projects")}
             </Link>
@@ -118,6 +122,7 @@ const Header = (props) => {
               className="contact header-element nav-item nav-link mx-3 text-white"
               to="/contact"
               onClick={closeNav}
+              style={{ paddingRight: "0px" }}
             >
               &#x1F4E7; {t("Contact")}
             </Link>
@@ -129,6 +134,7 @@ const Header = (props) => {
             className="resume header-element nav-item nav-link text-white"
             to="/resume"
             onClick={closeNav}
+            style={{ paddingRight: "0px" }}
           >
             &#127919; {t("Resume")}
           </Link>
