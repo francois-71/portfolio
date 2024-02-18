@@ -55,17 +55,19 @@ const Header = (props) => {
       </Link>
 
       <button
-        className={`navbar-toggler ${isNavOpen ? "collapsed" : ""}`}
+        className={`navbar navbar-toggler ${
+          isNavOpen ? "collapsed" : ""
+        }`}
         type="button"
         onClick={toggleNav}
         aria-controls="navbarNavAltMarkup"
         aria-label="Toggle navigation"
         style={{
-          backgroundColor: isNavOpen ? "rgb(45, 212, 191, 0.1)" : "transparent",
+          backgroundColor: isNavOpen ? "rgb(45, 212, 191, 0.3)" : "rgb(45, 212, 191, 0.1)",
           color: isNavOpen ? "#000" : "#fff",
           border: "none", // Remove border
           borderRadius: "12px",
-          padding: "8px 12px",
+          padding: "5px 8px",
           outline: "none",
           transition: "background-color 0.3s, color 0.3s",
           boxShadow: "none", // Remove box shadow
@@ -73,7 +75,6 @@ const Header = (props) => {
       >
         <span
           className="navbar-toggler-icon"
-          style={{ paddingLeft: "30px" }}
         ></span>
       </button>
 
@@ -94,7 +95,6 @@ const Header = (props) => {
               style={{ paddingRight: "0px" }}
             >
               &#x1F9B4; {t("About")}
-
             </Link>
           </li>
           <li>

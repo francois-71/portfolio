@@ -11,7 +11,8 @@ a.experience,
 a.projects,
 a.contact,
 a.resume{
-  padding-right: 15px;
+  padding-right: 0px;
+  padding-left: 5px;
 }
 
 .navbar {
@@ -70,11 +71,19 @@ a.resume{
   }
 }
 
+@media (max-width: 1300px){
+  .navbar-nav a.resume {
+    margin-left: 0 !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar-expanded .navbar-nav {
     flex-direction: column;
     align-items: center;
   }
+
+  
 
   .navbar-expanded .navbar-nav li:nth-child(1){
     order: 2;
