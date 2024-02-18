@@ -82,7 +82,7 @@ const Header = (props) => {
         id="navbarNavAltMarkup"
       >
         <ul
-          className={`navbar-nav mx-auto d-flex justify-content-evenly${
+          className={`navbar-nav mx-auto d-flex justify-content-between ${
             isNavOpen ? "flex-column" : ""
           }`}
         >

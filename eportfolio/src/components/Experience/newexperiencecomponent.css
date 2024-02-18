@@ -27,6 +27,7 @@
 
 .unique-experience-logo {
   width: 15%;
+  min-width: 150px;
   height: 100%;
   display: flex;
   align-items: center;

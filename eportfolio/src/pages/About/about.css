@@ -48,6 +48,9 @@
   .explore-contact{
     justify-content: center;
   }
+  .small-presentation-text{
+    text-align: justify;
+  }
 }
 
 .short-intro-text-images-right{
@@ -82,13 +85,19 @@
   display: flex;
   align-items: center;
   padding-top: 20px;
+  justify-content: right;
+  
 }
 .social-links-about a {
-  margin: 0 20px 0 0;
+  
   font-size: 25px;
   transition: 0.3s;
   text-decoration: none;
   color: rgba(148,163, 184, 0.5) !important;
+}
+
+.social-links-about a:not(:last-child) {
+  margin: 0 20px 0 0;
 }
 
 .github-logo:hover {
@@ -152,7 +161,6 @@
   font-weight: 500;
   padding-right: 0px;
   color: var(--h1-color-cv);
-  border-bottom: 1px solid var(--app-background-color-cv);
 }
 
 .explore-projects .explore-my-projects-button:hover,
@@ -160,7 +168,6 @@
 .explore-resume .explore-my-resume-button:hover,
 .explore-contact .explore-contact-button:hover {
   color: var(--explore-my-project-color-cv) !important;
-  border-bottom: 1px solid;
 }
 
 .explore-projects-arrow,
@@ -234,5 +241,9 @@
 @media screen and (max-width: 991.98px) {
   .container {
     flex-direction: column; /* Reverse the order for mobile screens */
+  }
+
+  .social-links-content{
+    justify-content: center;
   }
 }

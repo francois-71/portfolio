@@ -31,9 +31,16 @@
 
 .experience-line {
   width: 2px;
-  height: calc(100% - 140px);
+  height: 130px;
   background-color: var(--explore-my-project-color-cv); 
 }
+
+.experience-line-first {
+  height: calc(130px - 15px);
+  width: 2px;
+  background-color: var(--explore-my-project-color-cv); 
+}
+
 
 .experience-disk {
   width: 20px;
@@ -44,6 +51,11 @@
 
 .experience-horizontal-start-line {
   width: 20px;
+  height: 2px;
+  background-color: var(--explore-my-project-color-cv);
+}
+.experience-horizontal-inter-line {
+  width: 14px;
   height: 2px;
   background-color: var(--explore-my-project-color-cv);
 }

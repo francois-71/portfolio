@@ -13,6 +13,10 @@ const NewExperience = () => {
         <div className="experience-wrapper">
           <div className="experience-components-left">
             <div className="experience-disk"></div>
+            <div className="experience-line-first"></div>
+            <div className="experience-horizontal-inter-line"></div>
+            <div className="experience-line"></div>
+            <div className="experience-horizontal-inter-line"></div>
             <div className="experience-line"></div>
             <div className="experience-horizontal-start-line"></div>
           </div>

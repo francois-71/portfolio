@@ -17,12 +17,19 @@
   --header-button-focus-color-cv: rgb(94 234 212);
 }
 
+@font-face {
+  font-family: "InterFrancois";
+  src: url('./fonts/Inter-3.19/InterDesktop/Inter-V.ttf') format('truetype');
+}
+
+
 .pages-container {
   min-height: 100vh;
 }
 
 .App {
   background-color: var(--app-background-color-cv);
+  font-family: 'InterFrancois', sans-serif;
 }
 
 html {
@@ -32,4 +39,5 @@ html {
 
 body{
   height: 100%;
+  
 }

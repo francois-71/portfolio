@@ -24,7 +24,7 @@ a.resume{
 .navbar-nav a.resume{
   width: 100px;
   cursor: pointer;
-  margin-left: 125px !important; /* 125px to compensate the language switcher on the left*/
+  margin-left: 150px !important; /* 125px to compensate the language switcher on the left*/
 }
 
 .form-title {
