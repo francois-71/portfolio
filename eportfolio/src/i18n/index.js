@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import translationsInEng from '../locales/en/translation.json';
-import translationsInFrench from '../locales/fr/translation.json';
+import translationsInEng from './locales/en/translation.json';
+import translationsInFrench from './locales/fr/translation.json';
 
 
 // the translations

@@ -20,6 +20,11 @@
   color: var(--p-color-cv);
   padding-bottom: 5px;
 }
+.form-title{
+  color: var(--h1-color-cv) !important;
+  text-align: center;
+  padding-bottom: 25px;
+}
 
 .input,
 .textarea {

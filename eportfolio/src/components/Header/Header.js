@@ -45,7 +45,6 @@ const Header = (props) => {
         className="navbar-brand"
       >
         <Logo logo="/assets/media/images/francois-dion-logo.png" />
-        {/* Replace the above line with the correct path and component for your logo */}
       </Link>
       <Link
         className="header-element nav-item nav-link mx-3 text-white"

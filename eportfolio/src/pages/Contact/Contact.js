@@ -50,7 +50,7 @@ function ContactMe() {
   const validateForm = () => {
     const newErrors = {};
 
-    // sanitize input
+    // sanitize input, not useful on client side 
     const sanitizer = DOMPurify.sanitize;
     sanitizedFormData.name = sanitizer(formData.name);
     sanitizedFormData.email = sanitizer(formData.email);
@@ -145,9 +145,9 @@ function ContactMe() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="form">
-          <h5 className="form-title">
+          <h3 className="form-title">
             {t("Title-contact-page-1")} <br></br> {t("Title-contact-page-2")}
-          </h5>
+          </h3>
 
           <div className="form-group">
             <label htmlFor="title" className="label">
