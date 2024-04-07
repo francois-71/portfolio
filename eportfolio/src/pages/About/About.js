@@ -45,7 +45,7 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <h3 className="skills">{t("Skills")}</h3>
+        <h3 className="skills">{t("I-have-worked-with")}</h3>
         <h6 className="programming-languages">{t("Programming-Languages")}</h6>
         <div className="skills-container-about">
           <Skill name="Python" constColor={colors.constColorDefault} />
@@ -56,12 +56,12 @@ const About = () => {
         </div>
         <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
         <div className="skills-container-about">
+          <Skill name="Next.js" constColor={colors.constColorDefault} />
+          <Skill name="Nest.js" constColor={colors.constColorDefault} />
           <Skill name="Django" constColor={colors.constColorDefault} />
           <Skill name="Flask" constColor={colors.constColorDefault} />
           <Skill name="Gin" constColor={colors.constColorDefault} />
           <Skill name="React" constColor={colors.constColorDefault} />
-          <Skill name="HTML" constColor={colors.constColorDefault} />
-          <Skill name="CSS" constColor={colors.constColorDefault} />
         </div>
         <h6 className="tools">{t("Version-Control")}</h6>
         <div className="skills-container-about">
