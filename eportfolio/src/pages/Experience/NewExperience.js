@@ -22,7 +22,7 @@ const NewExperience = () => {
           </div>
           <div className="experience-components-right">
             <NewExperienceComponent
-              period={t("Month-full.February") + " 2024 - " + t("Present")}
+              period={t("Month-full.February") + " 2024 - " + t("Month-full.May") + " 2024"}
               company="Moment (Paris, France)"
               company_url="https://www.moment.tech/"
               company_logo="/assets/media/images/moment_solutions_logo.svg"
