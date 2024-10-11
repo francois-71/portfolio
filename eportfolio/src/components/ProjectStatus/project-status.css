@@ -1,0 +1,18 @@
+.projectStatus {
+    display: inline-block;
+    padding: 0px !important;
+    border-radius: 23px; /* Add rounded corners if desired */
+  }
+
+.projectStatus:not(:first-child) {
+  margin: 0px 10px 5px 0px !important;
+}
+
+.projectStatus:first-child {
+  margin: 0px 10px 5px 0px !important;
+}
+.projectStatus p{
+    margin: 6px 14px 8px 14px !important;
+    font-size: 14px !important;
+    font-weight: 400;
+}

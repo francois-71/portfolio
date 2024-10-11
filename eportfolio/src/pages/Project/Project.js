@@ -4,6 +4,7 @@ import Skill from "../../components/Skill/Skill";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import "./project.css";
+import ProjectStatus from "../../components/ProjectStatus/ProjectStatus";
 
 const Project = () => {
   const { t } = useTranslation();
@@ -11,11 +12,23 @@ const Project = () => {
   const colors = {
     constColorDev: {
       color: "hsla(34, 97%, 58%, 1)",
-      BackgroundColor: "rgba(255, 165, 0, 0.1)",
+      backgroundColor: "rgba(255, 165, 0, 0.1)",
     },
     constColorDefault: {
       color: "rgb(94 234 212)",
-      BackgroundColor: "rgba(45, 212, 191, 0.1)",
+      backgroundColor: "rgba(45, 212, 191, 0.1)",
+    },
+    constColorCanceled: {
+      color: "rgba(255,0,0, 1)",
+      backgroundColor: "rgba(255,0,0, 0.1)",
+    },
+    constColorInProgress: {
+      color: "hsla(200, 100%, 100%, 1)",
+      backgroundColor: "rgba(0, 123, 255, 0.1)",
+    },
+    constColorFinished: {
+      color: "hsla(0, 0%, 100%, 1)",
+      backgroundColor: "rgba(40, 255, 10, 0.1)",
     },
   };
 
@@ -26,18 +39,24 @@ const Project = () => {
         <h2 className="project-all-project">{t("Projects")}</h2>
         <div className="project-item">
           <div className="skill-categories">
-          <Skill
-            name={t("Skill-default-text")}
-            constColor={colors.constColorDefault}
-          />
-          <Skill
-            name={t("Skill-futur-addition")}
-            constColor={colors.constColorDev}
-          />
+            <div className="developed-with">
+              <Skill
+                name={t("Skill-default-text")}
+                constColor={colors.constColorDefault}
+              />
+              <Skill
+                name={t("Skill-futur-addition")}
+                constColor={colors.constColorDev}
+              />
+            </div>
           </div>
+
           <div className="project-notice">
-            <strong>{(t("Note") + ": ")}</strong>{t("Projects-description-notice") + " "}
-            <Link className="contact-projects" to="/contact">&#x1F4E7;{t("Contact-me")}&#x1F4E7;</Link>
+            <strong>{t("Note") + ": "}</strong>
+            {t("Projects-description-notice") + " "}
+            <Link className="contact-projects" to="/contact">
+              {t("Contact-me")}
+            </Link>
           </div>
           <div className="project-table-container">
             <table>
@@ -46,6 +65,7 @@ const Project = () => {
                   <th style={{ color: "white", paddingRight: "25px" }}>
                     {t("Year")}
                   </th>
+                  <th style={{ color: "white" }}>{t("Project-status")}</th>
                   <th style={{ color: "white" }}>{t("Project")}</th>
                   <th style={{ color: "white" }}>{t("Made-at")}</th>
                   <th className="built-with-header">{t("Built-with")}</th>
@@ -54,7 +74,85 @@ const Project = () => {
               </thead>
               <ProjectComponent
                 year="2024"
+                project={t("DFHousing")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("In-Progress")}
+                    constColor={colors.constColorInProgress}
+                  />
+                }
+                made_at="&#x1F3E0;"
+                built_with={[
+                  <Skill
+                    key="1"
+                    name="TypeScript"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="2"
+                    name="Next.js"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="3"
+                    name="React"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="7"
+                    name="PostgreSQL"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="9"
+                    name="OpenCV"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="10"
+                    name="Docker"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="11"
+                    name="AWS S3"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="12"
+                    name="NGINX"
+                    constColor={colors.constColorDev}
+                  />,
+                  <Skill
+                    key="13"
+                    name="AWS EC2"
+                    constColor={colors.constColorDev}
+                  />,
+                  <Skill
+                    key="14"
+                    name="GitHub Actions"
+                    constColor={colors.constColorDev}
+                  />,
+                  <Skill
+                    key="15"
+                    name="Stripe"
+                    constColor={colors.constColorDev}
+                  />,
+                ]}
+                link=""
+                show_link="&#x1F510;"
+              />
+              <ProjectComponent
+                year="2024"
                 project={t("NginxLogsAnalyzer")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="&#x1F3E0;"
                 built_with={[
                   <Skill
@@ -67,18 +165,20 @@ const Project = () => {
                     name="React"
                     constColor={colors.constColorDefault}
                   />,
-                  <Skill
-                    key="3"
-                    name="CSS"
-                    constColor={colors.constColorDefault}
-                  />,
                 ]}
                 link="https://github.com/francois-71/NginxLogAnalyzer"
                 show_link="github.com/francois-71/NginxLogAnalyzer"
               />
               <ProjectComponent
                 year="2023"
-                project={t("DFHousing") + " (" + t("In-development") + ")"}
+                project={t("DFHousing")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Canceled")}
+                    constColor={colors.constColorCanceled}
+                  />
+                }
                 made_at="&#x1F3E0;"
                 built_with={[
                   <Skill
@@ -103,53 +203,18 @@ const Project = () => {
                   />,
                   <Skill
                     key="5"
-                    name="Bootstrap"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="6"
-                    name="CSS"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="7"
                     name="MongoDB Atlas"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="8"
+                    key="6"
                     name="Github"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="9"
+                    key="7"
                     name="OpenCV"
                     constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="10"
-                    name="Docker"
-                    constColor={colors.constColorDev}
-                  />,
-                  <Skill
-                    key="11"
-                    name="NGINX"
-                    constColor={colors.constColorDev}
-                  />,
-                  <Skill
-                    key="12"
-                    name="AWS EC2"
-                    constColor={colors.constColorDev}
-                  />,
-                  <Skill
-                    key="13"
-                    name="GitHub Actions"
-                    constColor={colors.constColorDev}
-                  />,
-                  <Skill
-                    key="14"
-                    name="Stripe"
-                    constColor={colors.constColorDev}
                   />,
                 ]}
                 link=""
@@ -158,6 +223,13 @@ const Project = () => {
               <ProjectComponent
                 year="2023"
                 project={t("Portfolio")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="&#x1F3E0;"
                 built_with={[
                   <Skill
@@ -167,51 +239,36 @@ const Project = () => {
                   />,
                   <Skill
                     key="2"
-                    name="Bootstrap"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="3"
-                    name="CSS"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="5"
                     name="JavaScript"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="6"
-                    name="BrowserStack"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="7"
+                    key="3"
                     name="Python"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="7"
+                    key="4"
                     name="Flask"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="8"
+                    key="5"
                     name="Github"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="9"
+                    key="6"
                     name="AWS EC2"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="10"
+                    key="7"
                     name="Docker"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
-                    key="11"
+                    key="8"
                     name="NGINX"
                     constColor={colors.constColorDefault}
                   />,
@@ -222,6 +279,13 @@ const Project = () => {
               <ProjectComponent
                 year="2023"
                 project={t("Api-development-monitoring-interface")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="Devoteam Innovative Tech (Paris, France)"
                 built_with={[
                   <Skill
@@ -232,16 +296,6 @@ const Project = () => {
                   <Skill
                     key="2"
                     name="Django"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="3"
-                    name="Django HTML"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="4"
-                    name="CSS"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
@@ -281,6 +335,13 @@ const Project = () => {
               <ProjectComponent
                 year="2023"
                 project={t("Bouncing-ball-game")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="Griffith University (Brisbane, Australia)"
                 built_with={[
                   <Skill
@@ -300,6 +361,13 @@ const Project = () => {
               <ProjectComponent
                 year="2022"
                 project={t("Front-end-development-of-a-web-application")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="Stations-e (Paris, France)"
                 built_with={[
                   <Skill
@@ -324,6 +392,13 @@ const Project = () => {
               <ProjectComponent
                 year="2022"
                 project={t("GIMP-like-image-editor")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="ISEP (Paris, France)"
                 built_with={[
                   <Skill
@@ -345,6 +420,13 @@ const Project = () => {
                 project={t(
                   "Tinder-Autoclicker-With-Facial-Eye-Recognition-And-Pixel-Analysis"
                 )}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="&#x1F3E0;"
                 built_with={[
                   <Skill
@@ -364,6 +446,13 @@ const Project = () => {
               <ProjectComponent
                 year="2021"
                 project={t("Mr-Jack-Pocket-Game-Development")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Finished")}
+                    constColor={colors.constColorFinished}
+                  />
+                }
                 made_at="ISEP (Paris, France)"
                 built_with={[
                   <Skill

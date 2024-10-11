@@ -10,11 +10,11 @@ const About = () => {
   const colors = {
     constColorDev: {
       color: "orange",
-      BackgroundColor: "rgba(255, 165, 0, 0.1)",
+      backgroundColor: "rgba(255, 165, 0, 0.1)",
     },
     constColorDefault: {
       color: "rgb(94 234 212)",
-      BackgroundColor: "rgba(45, 212, 191, 0.1)",
+      backgroundColor: "rgba(45, 212, 191, 0.1)",
     },
   };
 

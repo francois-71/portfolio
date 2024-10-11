@@ -4,6 +4,7 @@ import "./projectComponent.css";
 const ProjectComponent = ({
   year,
   project,
+  project_status,
   made_at,
   built_with,
   link = "",
@@ -11,14 +12,14 @@ const ProjectComponent = ({
 }) => {
   /* check if website link is empty or not */
   const isLinkNotEmpty = link.length > 0;
-  const [isScreenBelow986px, setIsScreenBelow986px] = useState(
-    window.innerWidth < 986
+  const [isScreenBelow1051px, setIsScreenBelow1051px] = useState(
+    window.innerWidth < 1051
   );
 
-  // Use useEffect to update isScreenBelow986px on window resize
+  // Use useEffect to update isScreenBelow1051px on window resize
   useEffect(() => {
     const handleResize = () => {
-      setIsScreenBelow986px(window.innerWidth < 986);
+      setIsScreenBelow1051px(window.innerWidth < 1051);
     };
 
     window.addEventListener("resize", handleResize);
@@ -33,19 +34,19 @@ const ProjectComponent = ({
   return (
     <tbody className="project-component-text">
       <tr>
-        {[year, project, made_at, built_with, link].map((item, index) => (
+        {[year, project_status, project, made_at, built_with, link].map((item, index) => (
           <td key={index}>
-            {isScreenBelow986px && index === 1 && isLinkNotEmpty ? (
+            {isScreenBelow1051px && index === 2 && isLinkNotEmpty ? (
               <a className="clickable-links" href={link} target="_blank" rel="noreferrer">
                 <span className="arrow">&#8594;&nbsp;</span>
                 <span className="link-text">{item}</span>
               </a>
-            ) : isLinkNotEmpty && index === 4 ? (
+            ) : isLinkNotEmpty && index === 5 ? (
               <a className="clickable-links" href={link} target="_blank" rel="noreferrer">
                 <span className="arrow">&#8594;&nbsp;</span>
                 <span className="link-text-last-index">{show_link}</span>
               </a>
-            ) : !isLinkNotEmpty && index === 4 ? (
+            ) : !isLinkNotEmpty && index === 5 ? (
               <span className="not-clickable-links" href={link}>
                 <span className="link-text-last-index">{show_link}</span>
                 <span className="arrow"></span>

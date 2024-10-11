@@ -1,21 +1,26 @@
 .project-component-text tr td:nth-child(1) {
   color: var(--p-color-cv);
+  min-width: 120px;
 }
 
 .project-component-text tr td:nth-child(2) {
-  color: var(--h1-color-cv);
-  font-weight: 500;
+  min-width: 150px;
 }
 
 .project-component-text tr td:nth-child(3) {
   color: var(--h1-color-cv);
-  
+  font-weight: 500;
 }
 
 .project-component-text tr td:nth-child(4) {
   color: var(--h1-color-cv);
+  min-width: 130px;
 }
+
 .project-component-text tr td:nth-child(5) {
+  color: var(--h1-color-cv);
+}
+.project-component-text tr td:nth-child(6) {
   color: var(--h1-color-cv);
 }
 
