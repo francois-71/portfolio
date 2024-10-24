@@ -74,7 +74,7 @@ const Project = () => {
               </thead>
               <ProjectComponent
                 year="2024"
-                project={t("DFHousing")}
+                project={t("FastHousing")}
                 project_status={
                   <ProjectStatus
                     key="1"
