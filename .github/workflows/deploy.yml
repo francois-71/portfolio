@@ -37,7 +37,7 @@ jobs:
           echo "Syncing files to EC2 instance..."
           scp -r -o StrictHostKeyChecking=no ./* ec2-user@13.38.66.169:/home/ec2-user/
           
-          echo "Running Docker Compose on EC2 instance..."
+          echo "Running Docker Compose on EC2 instance...."
           echo "${{ secrets.EC2_SSH_KEY }}" > ec2_key.pem
           chmod 600 ec2_key.pem
           ssh -o StrictHostKeyChecking=no -i ec2_key.pem ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
