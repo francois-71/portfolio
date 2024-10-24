@@ -20,7 +20,7 @@ jobs:
 
       - name: Sync code to EC2
         run: |
-          rsync -avz ./ {{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:~/myapp/
+          rsync -avz ./ ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:~/
       - name: Pull and run Docker Compose
         run: |
           ssh ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
