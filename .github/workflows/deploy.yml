@@ -7,44 +7,40 @@ on:
 
 jobs:
   deploy:
+    name: deploy
     runs-on: ubuntu-latest
+    env:
+      AWS_INSTANCE_SG_ID: ${{ secrets.AWS_INSTANCE_SG_ID }}  # Security Group ID for your EC2 instance
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Print working directory on runner
+      - name: Get runner IP address
+        id: ip
+        uses: haythem/public-ip@v1.2
+
+      - name: Whitelist runner IP address
         run: |
-          echo "Current path on runner:"
-          pwd
-          ls -la  # List files in the current directory on the runner
+          aws ec2 authorize-security-group-ingress \
+            --group-id $AWS_INSTANCE_SG_ID \
+            --protocol tcp \
+            --port 22 \
+            --cidr ${{ steps.ip.outputs.ipv4 }}/32
 
-      
-      - name: Print current path on EC2
+      - name: SSH into EC2 and deploy
         run: |
-          echo "Fetching current path on EC2..."
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "pwd"
+          echo "Syncing files to EC2 instance..."
+          # Sync your application files (adjust path and username accordingly)
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no -i /path/to/your/private-key.pem" ./ ec2-user@${{ secrets.EC2_INSTANCE_DNS }}:/home/ec2-user/myapp/
 
-
-      - name: Sync code to EC2
-        run: |
-          echo "Attempting to sync files..."
-          rsync -avz ./ ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:/home/${{ secrets.USERNAME }}/.
-
-      - name: Pull and run Docker Compose
-        run: |
-          ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} << 'EOF'
-          set -x  # Enable command echoing
-          echo "Current path before cd on EC2:"
-          pwd  # Show current path on EC2
-          cd ~/myapp  # Change to your app directory
-          echo "Current path after cd on EC2:"
-          pwd  # Show current path after changing directory
+          echo "Running Docker Compose on EC2 instance..."
+          ssh -o StrictHostKeyChecking=no -i /path/to/your/private-key.pem ec2-user@${{ secrets.EC2_INSTANCE_DNS }} << 'EOF'
+          cd /home/ec2-user/myapp/
           docker-compose down
-          docker-compose -f docker-compose.yml up -d --build
+          docker-compose up -d --build
           EOF
