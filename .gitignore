@@ -10,3 +10,5 @@ eportfolio/certbot_certs/
 .lesshst
 .docker/
 .bash_history
+
+certbot

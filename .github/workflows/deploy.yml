@@ -39,7 +39,11 @@ jobs:
           chmod 600 ec2_key.pem
           scp -i ec2_key.pem -r -o StrictHostKeyChecking=no ./* ec2-user@13.38.66.169:/home/ec2-user/
           ssh -o StrictHostKeyChecking=no -i ec2_key.pem ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
+
           cd /home/ec2-user/
+
+          git fetch
+
           UPSTREAM=${1:-'@{u}'}  # Default to the upstream branch
           LOCAL=$(git rev-parse @)  # Current local commit
           REMOTE=$(git rev-parse "$UPSTREAM")  # Remote commit
@@ -47,15 +51,14 @@ jobs:
 
           if [ "$LOCAL" = "$REMOTE" ]; then
               echo "Up-to-date"
-          elif [ "$LOCAL" = "$BASE" ]; then
+
+          else 
               echo "Pulling from remote"
-              git pull
+              git reset --hard "$UPSTREAM"
 
               echo "Docker compose down & up with the new pulled code"
               docker-compose down
               docker-compose up -d --build
-          else
-              echo "Diverged"
           fi
 
           # Cleanup
