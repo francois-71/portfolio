@@ -3,3 +3,10 @@ apiportfolio/.env
 logs
 temp
 letsencrypt
+data
+eportfolio/certbot_certs/
+.ssh/
+.viminfo
+.lesshst
+.docker/
+.bash_history
