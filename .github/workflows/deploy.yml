@@ -27,7 +27,7 @@ jobs:
       - name: Sync code to EC2
         run: |
           echo "Attempting to sync files..."
-          rsync -avz ./ ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:~/home/ec2-user/
+          rsync -avz ./ ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:~/
 
       - name: Pull and run Docker Compose
         run: |
