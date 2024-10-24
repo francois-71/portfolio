@@ -40,14 +40,14 @@ jobs:
           scp -i ec2_key.pem -r -o StrictHostKeyChecking=no ./* ec2-user@13.38.66.169:/home/ec2-user/
           ssh -o StrictHostKeyChecking=no -i ec2_key.pem ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
           cd /home/ec2-user/
-          UPSTREAM=${1:-'@{u}'}
-          LOCAL=$(git rev-parse @)
-          REMOTE=$(git rev-parse "$UPSTREAM")
-          BASE=$(git merge-base @ "$UPSTREAM")
+          UPSTREAM=${1:-'@{u}'}  # Default to the upstream branch
+          LOCAL=$(git rev-parse @)  # Current local commit
+          REMOTE=$(git rev-parse "$UPSTREAM")  # Remote commit
+          BASE=$(git merge-base @ "$UPSTREAM")  # Base commit
 
-          if [ $LOCAL = $REMOTE ]; then
+          if [ "$LOCAL" = "$REMOTE" ]; then
               echo "Up-to-date"
-          elif [ $LOCAL = $BASE ]; then
+          elif [ "$LOCAL" = "$BASE" ]; then
               echo "Pulling from remote"
               git pull
 
