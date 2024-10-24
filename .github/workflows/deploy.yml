@@ -13,13 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/github-actions-key
-          chmod 600 ~/.ssh/github-actions-key
-          ssh-keyscan -H ${{ secrets.HOST_DNS }} >> ~/.ssh/known_hosts
-
       - name: Deploy to EC2 Instance
         uses: easingthemes/ssh-deploy@main
         env:
