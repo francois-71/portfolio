@@ -21,10 +21,13 @@ jobs:
       - name: Sync code to EC2
         run: |
           rsync -avz ./ ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }}:~/
+
       - name: Pull and run Docker Compose
         run: |
-          ssh ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
-          cd /path/to/deploy/directory
+          ssh ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} << 'EOF'
+          cd ~/
+          echo "Pulling down existing containers..."
           docker-compose down
+          echo "Building and starting containers..."
           docker-compose -f docker-compose.yml up -d --build
           EOF
