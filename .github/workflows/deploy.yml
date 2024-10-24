@@ -38,10 +38,10 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > ec2_key.pem
           chmod 600 ec2_key.pem
           scp -i ec2_key.pem -r -o StrictHostKeyChecking=no ./* ec2-user@13.38.66.169:/home/ec2-user/
-          
           echo "Running Docker Compose on EC2 instance...."
           ssh -o StrictHostKeyChecking=no -i ec2_key.pem ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
           cd /home/ec2-user/
+          git pull
           docker-compose down
           docker-compose up -d --build
           EOF
