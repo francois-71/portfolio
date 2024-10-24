@@ -24,6 +24,13 @@ jobs:
           pwd
           ls -la  # List files in the current directory on the runner
 
+      
+      - name: Print current path on EC2
+        run: |
+          echo "Fetching current path on EC2..."
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST_DNS }} "pwd"
+
+
       - name: Sync code to EC2
         run: |
           echo "Attempting to sync files..."
