@@ -10,7 +10,7 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     env:
-      AWS_INSTANCE_SG_ID: ${{ secrets.AWS_INSTANCE_SG_ID }}  # Security Group ID for your EC2 instance
+      AWS_INSTANCE_SG_ID: ${{ secrets.AWS_INSTANCE_SG_ID }}
 
     steps:
       - name: Configure AWS credentials
@@ -38,13 +38,32 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > ec2_key.pem
           chmod 600 ec2_key.pem
           scp -i ec2_key.pem -r -o StrictHostKeyChecking=no ./* ec2-user@13.38.66.169:/home/ec2-user/
-          
-          echo "Running Docker Compose on EC2 instance...."
           ssh -o StrictHostKeyChecking=no -i ec2_key.pem ec2-user@${{ secrets.HOST_DNS }} << 'EOF'
           cd /home/ec2-user/
-          docker-compose down
-          docker-compose up -d --build
+          UPSTREAM=${1:-'@{u}'}
+          LOCAL=$(git rev-parse @)
+          REMOTE=$(git rev-parse "$UPSTREAM")
+          BASE=$(git merge-base @ "$UPSTREAM")
+
+          if [ $LOCAL = $REMOTE ]; then
+              echo "Up-to-date"
+          elif [ $LOCAL = $BASE ]; then
+              echo "Pulling from remote"
+              git pull
+
+              echo "Docker compose down & up with the new pulled code"
+              docker-compose down
+              docker-compose up -d --build
+          else
+              echo "Diverged"
+          fi
+
+          # Cleanup
+          rm -f ec2_key.pem
           EOF
+
+          # Cleanup the private key file on the GitHub Actions runner
+          rm -f ec2_key.pem
 
       - name: Remove runner IP from security group
         run: |
