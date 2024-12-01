@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  height: 520px; /* add 130px per experience component, it's dirty but it works */
+  height: 650px; /* add 130px per experience component, it's dirty but it works */
 }
 
 .experience-components-right {

@@ -18,9 +18,18 @@ const NewExperience = () => {
             <div className="experience-line"></div>
             <div className="experience-horizontal-inter-line"></div>
             <div className="experience-line"></div>
-            <div className="experience-horizontal-start-line"></div>
+            <div className="experience-horizontal-start-line"></div>            
+            <div className="experience-line"></div>
+            <div className="experience-horizontal-start-line"></div>            
           </div>
           <div className="experience-components-right">
+          <NewExperienceComponent
+              period={t("Month-full.December") + " 2024 - " + t("Present")}
+              company="Orchestrade (Paris, France)"
+              company_url="https://orchestrade.com"
+              company_logo="/assets/media/images/orchestrade.png"
+              job_title={t("Job-Description.Junior-Software-Developer")}
+            />
             <NewExperienceComponent
               period={t("Month-full.February") + " 2024 - " + t("Month-full.May") + " 2024"}
               company="Moment (Paris, France)"
