@@ -50,14 +50,6 @@ const Project = () => {
               />
             </div>
           </div>
-
-          <div className="project-notice">
-            <strong>{t("Note") + ": "}</strong>
-            {t("Projects-description-notice") + " "}
-            <Link className="contact-projects" to="/contact">
-              {t("Contact-me")}
-            </Link>
-          </div>
           <div className="project-table-container">
             <table>
               <thead>
