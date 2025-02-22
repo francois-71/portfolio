@@ -53,6 +53,7 @@ const About = () => {
           <Skill name="JavaScript" constColor={colors.constColorDefault} />
           <Skill name="TypeScript" constColor={colors.constColorDefault} />
           <Skill name="Golang" constColor={colors.constColorDefault} />
+          <Skill name="C#" constColor={colors.constColorDefault} />
         </div>
         <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
         <div className="skills-container-about">
@@ -62,15 +63,18 @@ const About = () => {
           <Skill name="Flask" constColor={colors.constColorDefault} />
           <Skill name="Gin" constColor={colors.constColorDefault} />
           <Skill name="React" constColor={colors.constColorDefault} />
+          <Skill name=".NET" constColor={colors.constColorDefault} />
         </div>
         <h6 className="tools">{t("Version-Control")}</h6>
         <div className="skills-container-about">
           <Skill name="GitLab" constColor={colors.constColorDefault} />
           <Skill name="GitHub" constColor={colors.constColorDefault} />
+          <Skill name="Apache Subversion" constColor={colors.constColorDefault} />
         </div>
         <h6 className="DevOps">{t("DevOps")}</h6>
         <div className="skills-container-about">
           <Skill name="GitLab CI/CD" constColor={colors.constColorDefault} />
+          <Skill name="Github Actions" constColor={colors.constColorDefault} />
           <Skill name="Docker" constColor={colors.constColorDefault} />
         </div>
         <h6 className="databases"> {t("Databases")} </h6>
