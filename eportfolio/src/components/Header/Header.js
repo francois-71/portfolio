@@ -20,7 +20,8 @@ const Header = (props) => {
   useEffect(() => {
     // Event listener to reset alignment when the screen size is larger
     const handleResize = () => {
-      if (window.innerWidth > 991.98) {
+      if (window.innerWidth > 1140) {
+        // 1140px is the breakpoint for navbar-expand-xl
         setIsNavOpen(false);
       }
     };
@@ -47,34 +48,38 @@ const Header = (props) => {
         <Logo logo="/assets/media/images/francois-dion-logo.png" />
       </Link>
       <Link
-        className="header-element nav-item nav-link mx-3 text-white"
+        className="language header-element nav-item nav-link text-white"
         style={{ borderBottom: "none" }}
       >
         <LanguageSelector onLanguageChange={closeNav} />
       </Link>
 
       <button
-        className={`navbar navbar-toggler ${
-          isNavOpen ? "collapsed" : ""
-        }`}
+        className={`navbar-toggler d-xl-none` + (isNavOpen ? " open" : "")}
         type="button"
         onClick={toggleNav}
         aria-controls="navbarNavAltMarkup"
         aria-label="Toggle navigation"
         style={{
-          backgroundColor: isNavOpen ? "rgb(45, 212, 191, 0.3)" : "rgb(45, 212, 191, 0.1)",
           color: isNavOpen ? "#000" : "#fff",
-          border: "none", // Remove border
+          border: "none",
           borderRadius: "12px",
           padding: "5px 8px",
           outline: "none",
           transition: "background-color 0.3s, color 0.3s",
-          boxShadow: "none", // Remove box shadow
+          boxShadow: "none",
+          width: "60px",
+          height: "60px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <span
-          className="navbar-toggler-icon"
-        ></span>
+        <div className={`hamburger ${isNavOpen ? "open" : ""}`}>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </div>
       </button>
 
       <div
@@ -88,22 +93,11 @@ const Header = (props) => {
         >
           <li>
             <Link
-              className="about header-element nav-item nav-link mx-3 text-white"
-              to="/about"
-              onClick={closeNav}
-              style={{ paddingRight: "0px" }}
-            >
-              &#x1F9B4; {t("About")}
-            </Link>
-          </li>
-          <li>
-            <Link
               className="experience header-element nav-item nav-link mx-3 text-white"
               to="/experience"
               onClick={closeNav}
-              style={{ paddingRight: "0px" }}
             >
-              &#x1F30D; {t("Experience")}
+              {t("Experience")}
             </Link>
           </li>
           <li>
@@ -111,9 +105,8 @@ const Header = (props) => {
               className="projects header-element nav-item nav-link mx-3 text-white"
               to="/projects"
               onClick={closeNav}
-              style={{ paddingRight: "0px" }}
             >
-              &#x1F6A7; {t("Projects")}
+              {t("Projects")}
             </Link>
           </li>
           <li>
@@ -121,9 +114,17 @@ const Header = (props) => {
               className="contact header-element nav-item nav-link mx-3 text-white"
               to="/contact"
               onClick={closeNav}
-              style={{ paddingRight: "0px" }}
             >
-              &#x1F4E7; {t("Contact")}
+              {t("Contact")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="about header-element nav-item nav-link mx-3 text-white"
+              to="/about"
+              onClick={closeNav}
+            >
+              {t("About")}
             </Link>
           </li>
         </ul>
@@ -133,9 +134,8 @@ const Header = (props) => {
             className="resume header-element nav-item nav-link text-white"
             to="/resume"
             onClick={closeNav}
-            style={{ paddingRight: "0px" }}
           >
-            &#127919; {t("Resume")}
+            {t("Resume")}
           </Link>
         </div>
       </div>
