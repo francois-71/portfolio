@@ -183,7 +183,7 @@ const About = () => {
               <br /> <i>{t("Master-in-Software-Engineering")}</i>
               <br />
               <span className="education-time-place">
-                {t("Month-half.January")} 2018 - {t("Month-half.September")}{" "}
+                {t("Month-half.September")} 2018 - {t("Month-half.September")}{" "}
                 2023 {t("Paris")}, {t("France")}
               </span>
             </p>
