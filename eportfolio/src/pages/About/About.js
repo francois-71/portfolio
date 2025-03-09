@@ -40,7 +40,7 @@ const About = () => {
             <Link className="explore-contact" to="/contact">
               <div className="explore-contact-button">
                 <span className="explore-contact-arrow">&#8594;&nbsp;</span>
-                {t("Lets-Talk")} &#x1F4E7;
+                {t("Lets-Talk") + " "}&#x1F4E7;
               </div>
             </Link>
           </div>
@@ -55,7 +55,7 @@ const About = () => {
           <Skill name="Golang" constColor={colors.constColorDefault} />
           <Skill name="C#" constColor={colors.constColorDefault} />
         </div>
-        <h6 className="web-frameworks">{t("Web-Frameworks")}</h6>
+        <h6 className="web-frameworks">{t("Frameworks")}</h6>
         <div className="skills-container-about">
           <Skill name="Next.js" constColor={colors.constColorDefault} />
           <Skill name="Nest.js" constColor={colors.constColorDefault} />
