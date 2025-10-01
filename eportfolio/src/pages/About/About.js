@@ -13,8 +13,8 @@ const About = () => {
       backgroundColor: "rgba(255, 165, 0, 0.1)",
     },
     constColorDefault: {
-      color: "rgb(94 234 212)",
-      backgroundColor: "rgba(45, 212, 191, 0.1)",
+      color: "rgb(207, 178, 132)",
+      backgroundColor: "rgba(207, 178, 132, 0.1)",
     },
   };
 

@@ -2,7 +2,6 @@ import React from "react";
 import ProjectComponent from "../../components/Project/ProjectComponent";
 import Skill from "../../components/Skill/Skill";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import "./project.css";
 import ProjectStatus from "../../components/ProjectStatus/ProjectStatus";
 
@@ -66,7 +65,7 @@ const Project = () => {
               </thead>
               <ProjectComponent
                 year="2024"
-                project={t("FastHousing")}
+                project={t("GalaxyHopper")}
                 project_status={
                   <ProjectStatus
                     key="1"
@@ -88,7 +87,48 @@ const Project = () => {
                   />,
                   <Skill
                     key="3"
-                    name="React"
+                    name="NestJS"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="4"
+                    name="PostgreSQL"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="5"
+                    name="Three.js"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="6"
+                    name="Docker"
+                    constColor={colors.constColorDefault}
+                  />,
+                ]}
+                link=""
+                show_link="&#x1F510;"
+              />
+              <ProjectComponent
+                year="2024"
+                project={t("FastHousing")}
+                project_status={
+                  <ProjectStatus
+                    key="1"
+                    name={t("Canceled")}
+                    constColor={colors.constColorCanceled}
+                  />
+                }
+                made_at="&#x1F3E0;"
+                built_with={[
+                  <Skill
+                    key="1"
+                    name="TypeScript"
+                    constColor={colors.constColorDefault}
+                  />,
+                  <Skill
+                    key="2"
+                    name="Next.js"
                     constColor={colors.constColorDefault}
                   />,
                   <Skill
@@ -160,57 +200,6 @@ const Project = () => {
                 ]}
                 link="https://github.com/francois-71/NginxLogAnalyzer"
                 show_link="github.com/francois-71/NginxLogAnalyzer"
-              />
-              <ProjectComponent
-                year="2023"
-                project={t("DFHousing")}
-                project_status={
-                  <ProjectStatus
-                    key="1"
-                    name={t("Canceled")}
-                    constColor={colors.constColorCanceled}
-                  />
-                }
-                made_at="&#x1F3E0;"
-                built_with={[
-                  <Skill
-                    key="1"
-                    name="Golang"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="2"
-                    name="Gin"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="3"
-                    name="React"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="4"
-                    name="JavaScript"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="5"
-                    name="MongoDB Atlas"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="6"
-                    name="Github"
-                    constColor={colors.constColorDefault}
-                  />,
-                  <Skill
-                    key="7"
-                    name="OpenCV"
-                    constColor={colors.constColorDefault}
-                  />,
-                ]}
-                link=""
-                show_link="&#x1F510;"
               />
               <ProjectComponent
                 year="2023"

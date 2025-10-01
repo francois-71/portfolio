@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --text-color-cv: rgb(148 163 184);
   --h3-color-cv: rgb(223, 236, 255);
   --brown-cv: rgba(153, 76, 0, 0.8);
@@ -16,12 +16,45 @@
   --app-background-color-cv: rgb(15 23 42);
   --header-button-focus-color-cv: rgb(94 234 212);
 }
+*/
 
-@font-face {
-  font-family: "InterFrancois";
-  src: url('./fonts/Inter-3.19/InterDesktop/Inter-V.ttf') format('truetype');
+:root {
+  --text-color-cv: rgb(148 163 184);
+  --h3-color-cv: rgb(223, 236, 255);
+  --brown-cv: rgba(153, 76, 0, 0.8);
+  --h5-color-cv: rgb(223, 236, 255);
+  --p-color-cv: rgb(148 163 184);
+  --h1-color-cv: rgb(223, 236, 255);
+  --h6-color-cv: rgb(223, 236, 255);
+  --header-text-color-cv: rgb(223, 236, 255);
+  --arrow-color-cv: rgba(207, 178, 132, 0.8);
+  --arrow-color2-cv: rgb(207, 178, 132);
+  --skill-background-color-cv: rgba(207, 178, 132, 0.1);
+  --skill-background-color-hover-cv: rgba(207, 178, 132, 0.2);
+  --skill-color-cv: rgb(207, 178, 132);
+  --explore-my-project-color-cv: rgb(207, 178, 132);
+  --app-background-color-cv: rgb(15 23 42);
+  --header-button-focus-color-cv: rgb(207, 178, 132);
 }
 
+/*
+@font-face {
+  font-family: "InterFrancois";
+  src: url("./fonts/Inter-3.19/InterDesktop/Inter-V.ttf") format("truetype");
+}
+  */
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/plusjakartasans/v12/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU79TR_VMq2oRsWk.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 .pages-container {
   min-height: 100vh;
@@ -29,7 +62,8 @@
 
 .App {
   background-color: var(--app-background-color-cv);
-  font-family: 'InterFrancois', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -37,7 +71,6 @@ html {
   height: 100%;
 }
 
-body{
+body {
   height: 100%;
-  
 }

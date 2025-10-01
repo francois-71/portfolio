@@ -16,7 +16,7 @@
   "Full-Presentation": {
     "Part-1-1": "I am a",
     "Part-1-2": "Software Engineer/Developer from France",
-    "Part-1-3": "with a strong interest in web and software. My journey into the world of IT began during my academic pursuits, where I honed my skills in web and software development. While I've recently graduated, I've already had the opportunity to contribute to significant projects in that area.",
+    "Part-1-3": "with a strong interest in web and software. My journey into the world of IT began during my academic pursuits, where I honed my skills in web and software development. I am currently working as a software developer (c# .NET) at Orchestrade (Paris, France).",
     "Part-2-1": "Beyond my professional life, I have been a",
     "Part-2-2": "glider pilot for 8 years now",
     "Part-2-3": "and have held my glider pilot licence (SPL) since 2018. Aviation is another area I am passionate about and is a hobby that provides me with a sense of freedom and adventure.",
@@ -93,6 +93,7 @@
   "Skill-futur-addition": "Future addition",
   "Projects-description-notice": "I am currently working on the description of each project where you will be able to find more information about them. In the meantime, you can click on the links to access my projects or contact me directly here:",
   "NginxLogsAnalyzer": "A web application which let you load your NGINX logs and give you information about IPs that made HTTP/s requests to your server.",
+  "GalaxyHopper": "Galaxy Hopper: A 3D web application that lets you explore different entities that compose our universe.",
   "DFHousing": "DFHousing: A web application to rent and manage your properties online.",
   "FastHousing": "FastHousing: A web application to rent and manage your properties online.",
   "Portfolio": "Portfolio.",
