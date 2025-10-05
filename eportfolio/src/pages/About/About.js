@@ -69,7 +69,10 @@ const About = () => {
         <div className="skills-container-about">
           <Skill name="GitLab" constColor={colors.constColorDefault} />
           <Skill name="GitHub" constColor={colors.constColorDefault} />
-          <Skill name="Apache Subversion" constColor={colors.constColorDefault} />
+          <Skill
+            name="Apache Subversion"
+            constColor={colors.constColorDefault}
+          />
         </div>
         <h6 className="DevOps">{t("DevOps")}</h6>
         <div className="skills-container-about">
@@ -99,7 +102,8 @@ const About = () => {
         </div>
       </div>
       <div className="long-intro-container">
-        <h3 className="who-am-i">{t("Who-Am-I")}</h3>
+        {/*<h3 className="who-am-i">{t("Who-Am-I")}</h3>*/}
+        <h3 className="who-am-i">&#x1F9B4;</h3>
         <p className="description">
           {t("Full-Presentation.Part-1-1")}&nbsp;
           <span className="description-strong">
@@ -150,7 +154,7 @@ const About = () => {
           <Link className="explore-experience" to="/experience">
             <div className="explore-my-experience-button">
               <span className="explore-experience-arrow">&#8594;&nbsp;</span>
-              {t("View-my-experiences")} &nbsp;&#x1F30D;
+              {t("View-my-experiences")}
             </div>
           </Link>
         </div>
@@ -158,7 +162,7 @@ const About = () => {
           <Link className="explore-projects" to="/projects">
             <div className="explore-my-projects-button">
               <span className="explore-projects-arrow">&#8594;&nbsp;</span>
-              {t("Explore-my-projects")} &nbsp;&#x1F6A7;
+              {t("Explore-my-projects")}
             </div>
           </Link>
         </div>
@@ -166,7 +170,7 @@ const About = () => {
           <Link className="explore-resume" to="/resume">
             <div className="explore-my-resume-button">
               <span className="explore-resume-arrow">&#8594;&nbsp;</span>
-              {t("View-my-resume")} &#127919;
+              {t("View-my-resume")}
             </div>
           </Link>
         </div>
