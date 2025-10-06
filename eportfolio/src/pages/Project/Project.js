@@ -64,7 +64,7 @@ const Project = () => {
                 </tr>
               </thead>
               <ProjectComponent
-                year="2024"
+                year="2025"
                 project={t("GalaxyHopper")}
                 project_status={
                   <ProjectStatus
